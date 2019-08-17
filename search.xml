@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[網頁安全性驗證]]></title>
+    <url>%2F2019%2F08%2F17%2F%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%E6%80%A7%E9%A9%97%E8%AD%89%2F</url>
+    <content type="text"><![CDATA[含有內容、ISSUE、解決方式、後記 || 專案內容使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行LINE LOGIN 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。 || 專案ISSUE有位使用者複製LOGIN後的連結(含有UID資訊)，接著使用其他裝置點擊其連結，發現仍可以看到會員卡，故認為其有安全性的憂慮，且有違反歐洲的某的法規，因此要求改善。 || 解決方式 LINE LOGIN將Line 一次性的參數置入連結 前端人員取得連結參數, 打API再次驗證連結參數正確性 驗證成功後, Response Headers 多一個key 打API取會員卡資料時，Request Headers 多增加ㄧkey參數 若步驟2失敗時, 再走一次步驟1 || 後記 若之後其他使用者再複製此連結時，因為一次性參數原則，會再要求依據登入帳號密碼，執行LINE LOGIN驗證，也加強了安全性。 但這樣的一次性參數的安全性修正也苦了測試人員及開發人員，在手機端，因為是已登入APP狀態，所以不會要求輸入帳號密碼，也不會影響體驗 ; 但如果在網頁端，相關人員就要一直輸入帳號密碼或點擊確認輸入按鈕，嗚嗚嗚！ 美廉社 SimpleMart 經驗紀錄]]></content>
+      <categories>
+        <category>專案</category>
+      </categories>
+      <tags>
+        <tag>專案經驗</tag>
+        <tag>安全性驗證</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[測試]]></title>
+    <url>%2F2019%2F08%2F16%2F%E6%B8%AC%E8%A9%A6%2F</url>
+    <content type="text"><![CDATA[這是我的第一個測試文件 第一則列表項目 另一個項目 ⋅⋅* 無序的次清單。 數字本身是否排序並不重要，通通使用相同的數字也可以。⋅⋅1. 排序的次清單。 另一個項目 ⋅⋅⋅你可以在一則項目中使用縮進的段落格式。注意上面的空行，還有本段前的空格（至少一個，我們使用了三個，讓呈現更清楚）。 ⋅⋅⋅在一個段落中強制換行，在語句後方加入兩個空格。⋅⋅⋅⋅⋅這個被強制設定的獨立行，依舊在同一個段落中。⋅⋅⋅⋅⋅（有些人覺得使用空格強制換行太麻煩，例如 GFM 就根本不需要）。 可以使用星號建立無序清單 或是短橫線（負號） 使用半形加號也可以 強調，例如義大利斜體，可以使用 asterisks 或 _underscores_。 加重語氣的強調，例如粗體，可以用 asterisks 或 underscores。 你還可以混用這兩種 asterisks and underscores。 替文字加上刪除線，像這樣 Scratch this. Text prior to footnote reference.[^2][^2] Comment to include in footnote. 這是我們的 logo （將滑鼠移到圖片上會顯示圖片標題）： 行內格式： 參考連結格式： 引言（Blockquotes）常常出現在電子郵件中，表示摘錄來信原句並回覆。這一行是引言的一部分。 三個或三個以上的符號，必須在獨立的一行，前後不能有其他文字。 短橫線（Hyphens） 半形星號（Asterisks） 下底線（Underscores）]]></content>
+      <tags>
+        <tag>測試文件</tag>
+      </tags>
+  </entry>
+</search>
