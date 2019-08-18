@@ -86,7 +86,7 @@
 <meta property="og:description" content="| 介紹gulp 官網 gulp是一個開源JavaScript工具包，由Eric Sc​​hoffstall創建，用作前端Web開發中的流構建系統。 它是一個基於Node.js和npm的任務運行器，用於自動化Web開發中涉及的耗時和重複性任務，如縮小，連接，緩存清除，單元測試，linting，優化等。">
 <meta property="og:locale" content="en-us">
 <meta property="og:image" content="https://live.staticflickr.com/65535/48565057137_9d608c3269_z.jpg">
-<meta property="og:updated_time" content="2019-08-18T09:57:02.001Z">
+<meta property="og:updated_time" content="2019-08-18T10:05:40.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gulp初探">
 <meta name="twitter:description" content="| 介紹gulp 官網 gulp是一個開源JavaScript工具包，由Eric Sc​​hoffstall創建，用作前端Web開發中的流構建系統。 它是一個基於Node.js和npm的任務運行器，用於自動化Web開發中涉及的耗時和重複性任務，如縮小，連接，緩存清除，單元測試，linting，優化等。">
@@ -343,12 +343,12 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="介紹"><a href="#介紹" class="headerlink" title="| 介紹"></a>| 介紹</h2><h5 id="gulp-官網"><a href="#gulp-官網" class="headerlink" title="gulp 官網"></a><a href="https://gulpjs.com/" target="_blank" rel="noopener">gulp 官網</a></h5><blockquote>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="介紹"><a href="#介紹" class="headerlink" title="| 介紹"></a>| 介紹</h2><h3 id="gulp-官網"><a href="#gulp-官網" class="headerlink" title="gulp 官網"></a><a href="https://gulpjs.com/" target="_blank" rel="noopener">gulp 官網</a></h3><blockquote>
 <p>gulp是一個開源JavaScript工具包，由Eric Sc​​hoffstall創建，用作前端Web開發中的流構建系統。 它是一個基於Node.js和npm的任務運行器，用於自動化Web開發中涉及的耗時和重複性任務，如縮小，連接，緩存清除，單元測試，linting，優化等。</p>
 </blockquote>
 <a id="more"></a>
 
-<h5 id="Gulp-四個基本API：："><a href="#Gulp-四個基本API：：" class="headerlink" title="Gulp 四個基本API：："></a>Gulp 四個基本API：：</h5><table>
+<h3 id="Gulp-四個基本API：："><a href="#Gulp-四個基本API：：" class="headerlink" title="Gulp 四個基本API：："></a>Gulp 四個基本API：：</h3><table>
 <thead>
 <tr>
 <th align="left">name</th>
@@ -372,17 +372,20 @@
 <td align="left">監視執行過程中，資料是否變更</td>
 </tr>
 </tbody></table>
-<h5 id="操作事件使用pipe-其串接概念圖如下"><a href="#操作事件使用pipe-其串接概念圖如下" class="headerlink" title="操作事件使用pipe(), 其串接概念圖如下:"></a>操作事件使用<code>pipe()</code>, 其串接概念圖如下:</h5><p><img src="https://live.staticflickr.com/65535/48565057137_9d608c3269_z.jpg" alt="gulpPipe"></p>
-<h2 id="安裝與Try-It-mac經驗"><a href="#安裝與Try-It-mac經驗" class="headerlink" title="| 安裝與Try It (mac經驗)"></a>| 安裝與Try It (mac經驗)</h2><h5 id="STEP-1-於terminal-輸入-sudo-npm-install-gulp-g"><a href="#STEP-1-於terminal-輸入-sudo-npm-install-gulp-g" class="headerlink" title="STEP 1.  於terminal 輸入 sudo npm install gulp -g"></a>STEP 1.  於terminal 輸入 sudo npm install gulp -g</h5><blockquote>
-<p>-g 安裝在目前的電腦上, 目的是啟用 “gulp” 這個指令<br>當完成安裝時, 輸入gulp -v, 當terminal回應 command not found, 試著：<br>輸入 <strong>export PATH=$PATH:/Users/denis/.npm-global/bin</strong></p>
+<h3 id="操作事件使用pipe-其串接概念圖如下"><a href="#操作事件使用pipe-其串接概念圖如下" class="headerlink" title="操作事件使用pipe(), 其串接概念圖如下:"></a>操作事件使用<code>pipe()</code>, 其串接概念圖如下:</h3><p><img src="https://live.staticflickr.com/65535/48565057137_9d608c3269_z.jpg" alt="gulpPipe"></p>
+<h2 id="安裝與Try-It-mac經驗"><a href="#安裝與Try-It-mac經驗" class="headerlink" title="| 安裝與Try It (mac經驗)"></a>| 安裝與Try It (mac經驗)</h2><p><strong>STEP 1.  於terminal 輸入 sudo npm install gulp -g</strong></p>
+<blockquote>
+<p>-g 安裝在目前的電腦上, 目的是啟用 “gulp” 這個指令<br>當完成安裝時, 輸入gulp -v, 當terminal回應 command not found, 試著：<br>輸入export PATH=$PATH:/Users/denis/.npm-global/bin</p>
 </blockquote>
-<h5 id="STEP-2-建立新檔案夾、npm-init"><a href="#STEP-2-建立新檔案夾、npm-init" class="headerlink" title="STEP 2.  建立新檔案夾、npm init"></a>STEP 2.  建立新檔案夾、npm init</h5><h5 id="STEP-3-npm-install-gulp-–save"><a href="#STEP-3-npm-install-gulp-–save" class="headerlink" title="STEP 3.  npm install gulp –save"></a>STEP 3.  npm install gulp –save</h5><blockquote>
+<p><strong>STEP 2.  建立新檔案夾、npm init</strong></p>
+<p><strong>STEP 3.  npm install gulp –save</strong></p>
+<blockquote>
 <p>裝在目前的專案資料夾內, 目的是執行 gulp 時可以取用的套件</p>
 </blockquote>
-<h5 id="STEP-4-建立新檔案"><a href="#STEP-4-建立新檔案" class="headerlink" title="STEP 4.  建立新檔案"></a>STEP 4.  建立新檔案</h5><p>新增一個gulpfile.js 、source/ index.html</p>
-<h5 id="STEP-5-於gulpfile-js建立資料"><a href="#STEP-5-於gulpfile-js建立資料" class="headerlink" title="STEP 5.  於gulpfile.js建立資料"></a>STEP 5.  於gulpfile.js建立資料</h5>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require('gulp')</span><br><span class="line">// copyHTML 為自定義任務名稱</span><br><span class="line">gulp.task('copyHTML', function() {</span><br><span class="line">  // 抓取source 裡的所有HTML</span><br><span class="line">  return gulp.src('./source/**/*.html')</span><br><span class="line">   .pipe(gulp.dest('./public/'))</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
-
-<h5 id="STEP-6-於terminal執行Gulp"><a href="#STEP-6-於terminal執行Gulp" class="headerlink" title="STEP 6. 於terminal執行Gulp"></a>STEP 6. 於terminal執行Gulp</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp [任務名稱 ] ex: gulp copyHTML</span><br></pre></td></tr></tbody></table></figure></body></html>
+<p><strong>STEP 4.  建立新檔案</strong><br>新增一個gulpfile.js 、source/ index.html</p>
+<p><strong>STEP 5.  於gulpfile.js建立資料</strong><br>  </p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require('gulp')</span><br><span class="line">// copyHTML 為自定義任務名稱</span><br><span class="line">gulp.task('copyHTML', function() {</span><br><span class="line">  // 抓取source 裡的所有HTML</span><br><span class="line">  return gulp.src('./source/**/*.html')</span><br><span class="line">   .pipe(gulp.dest('./public/'))</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>STEP 6. 於terminal執行Gulp</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp [任務名稱 ] ex: gulp copyHTML</span><br></pre></td></tr></tbody></table></figure></body></html>
       
     </div>
     
@@ -564,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介紹"><span class="nav-number">1.</span> <span class="nav-text">| 介紹</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#gulp-官網"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">gulp 官網</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Gulp-四個基本API：："><span class="nav-number">1.0.0.2.</span> <span class="nav-text">Gulp 四個基本API：：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#操作事件使用pipe-其串接概念圖如下"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">操作事件使用pipe(), 其串接概念圖如下:</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝與Try-It-mac經驗"><span class="nav-number">2.</span> <span class="nav-text">| 安裝與Try It (mac經驗)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#STEP-1-於terminal-輸入-sudo-npm-install-gulp-g"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">STEP 1.  於terminal 輸入 sudo npm install gulp -g</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#STEP-2-建立新檔案夾、npm-init"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">STEP 2.  建立新檔案夾、npm init</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#STEP-3-npm-install-gulp-–save"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">STEP 3.  npm install gulp –save</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#STEP-4-建立新檔案"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">STEP 4.  建立新檔案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#STEP-5-於gulpfile-js建立資料"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">STEP 5.  於gulpfile.js建立資料</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#STEP-6-於terminal執行Gulp"><span class="nav-number">2.0.0.6.</span> <span class="nav-text">STEP 6. 於terminal執行Gulp</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介紹"><span class="nav-number">1.</span> <span class="nav-text">| 介紹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp-官網"><span class="nav-number">1.1.</span> <span class="nav-text">gulp 官網</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gulp-四個基本API：："><span class="nav-number">1.2.</span> <span class="nav-text">Gulp 四個基本API：：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作事件使用pipe-其串接概念圖如下"><span class="nav-number">1.3.</span> <span class="nav-text">操作事件使用pipe(), 其串接概念圖如下:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝與Try-It-mac經驗"><span class="nav-number">2.</span> <span class="nav-text">| 安裝與Try It (mac經驗)</span></a></li></ol></div>
             
 
           </div>
