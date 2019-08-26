@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JavaScript,六角學院 - JavaScript 核心篇,">
 
 
 
@@ -77,14 +77,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="hsuifang.github.io/tags/index.html">
+<meta name="keywords" content="JavaScript,六角學院 - JavaScript 核心篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="執行環境、作用域 (Jedna)">
+<meta property="og:url" content="hsuifang.github.io/2019/08/26/執行環境、作用域/index.html">
 <meta property="og:site_name" content="No Today !">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-08-17T04:04:27.385Z">
+<meta property="og:image" content="https://live.staticflickr.com/65535/48624347761_a7288c40f0_z.jpg">
+<meta property="og:updated_time" content="2019-08-26T14:50:57.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="執行環境、作用域 (Jedna)">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/48624347761_a7288c40f0_z.jpg">
 
 
 
@@ -114,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/tags/">
+  <link rel="canonical" href="hsuifang.github.io/2019/08/26/執行環境、作用域/">
 
 
 
 
 
-  <title>tags | No Today !</title>
+  <title>執行環境、作用域 (Jedna) | No Today !</title>
   
 
 
@@ -236,40 +239,192 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/08/26/執行環境、作用域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ifang Hsu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="No Today !">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                8 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/A1/" style="font-size: 12px; color: #ccc">A1</a> <a href="/tags/Gulp/" style="font-size: 12px; color: #ccc">Gulp</a> <a href="/tags/JavaScript/" style="font-size: 12px; color: #ccc">JavaScript</a> <a href="/tags/hellopolish-pl/" style="font-size: 12px; color: #ccc">hellopolish.pl</a> <a href="/tags/六角學院-JavaScript-核心篇/" style="font-size: 12px; color: #ccc">六角學院 - JavaScript 核心篇</a> <a href="/tags/嘰嘰雜雜/" style="font-size: 12px; color: #ccc">嘰嘰雜雜</a> <a href="/tags/安全性驗證/" style="font-size: 12px; color: #ccc">安全性驗證</a> <a href="/tags/專案經驗/" style="font-size: 12px; color: #ccc">專案經驗</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">執行環境、作用域 (Jedna)</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-26T22:22:15+08:00">
+                2019-08-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端學習/" itemprop="url" rel="index">
+                    <span itemprop="name">前端學習</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="JavaScript-如何運行"><a href="#JavaScript-如何運行" class="headerlink" title="|  JavaScript 如何運行"></a>|  JavaScript 如何運行</h2><p>JS是一個進直譯式語言, 透過直譯器 -> 直接運行，<br>也因此若發生錯誤時, 會直接反映在環境中！！！<br>以下為運行的過程 :::</p>
+<ol>
+<li>語法基本單元化  (Tokenizing)<br>一個一個值先一一拆解</li>
+<li>抽象結構樹 AST (Abstract Syntax Tree)<br>分析結構，如圖:<br><img src="https://live.staticflickr.com/65535/48624347761_a7288c40f0_z.jpg" alt="AST"></li>
+<li>代碼生成</li>
+</ol>
+<p><a href="https://esprima.org/demo/parse.html#" target="_blank" rel="noopener">produce小工具</a></p>
+<hr>
+<h2 id="LHS、-RHS"><a href="#LHS、-RHS" class="headerlink" title="|  LHS、 RHS"></a>|  LHS、 RHS</h2><p>認識他們，當錯誤發生時，可以藉由錯誤資訊，提升排除錯誤的效率</p>
+<h3 id="Right-hand-side-RHS-取值來自於右邊的變數上"><a href="#Right-hand-side-RHS-取值來自於右邊的變數上" class="headerlink" title="Right-hand side (RHS 取值來自於右邊的變數上)"></a>Right-hand side (RHS 取值來自於右邊的變數上)</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ex: var ming = ‘小明'</span><br><span class="line">var man = ming</span><br><span class="line">console.log(ming)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>!! 若有發生錯誤時，會在執行過程中見之</p>
+<h3 id="Left-hand-side-LHS-用來賦予值到左側的變數上"><a href="#Left-hand-side-LHS-用來賦予值到左側的變數上" class="headerlink" title="Left-hand side (LHS 用來賦予值到左側的變數上)"></a>Left-hand side (LHS 用來賦予值到左側的變數上)</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ex:  var ming = 'ming'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>!! 若發生LHS錯誤的時候，需要去檢查是不是左邊的變數無法被賦予值</p>
+<hr>
+<h3 id="語法作用域-Lexical-scope"><a href="#語法作用域-Lexical-scope" class="headerlink" title="| 語法作用域(Lexical scope)"></a>| 語法作用域(Lexical scope)</h3><blockquote>
+<p>分為靜態作用域及動態作用域<br>JavaScript 採取的為靜態作用域</p>
+</blockquote>
+<ol>
+<li><p>靜態作用域<br>變數的作用域在語法解析的時候，就已經決定作用域</p>
+</li>
+<li><p>動態作用域<br>變數的作用域在函式調用時才決定</p>
+</li>
+</ol>
+</body></html>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/六角學院-JavaScript-核心篇/" rel="tag"># 六角學院 - JavaScript 核心篇</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/24/tydzien/" rel="next" title="Moja plany na ten tydzień">
+                <i class="fa fa-chevron-left"></i> Moja plany na ten tydzień
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -302,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -375,6 +539,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-如何運行"><span class="nav-number">1.</span> <span class="nav-text">|  JavaScript 如何運行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LHS、-RHS"><span class="nav-number">2.</span> <span class="nav-text">|  LHS、 RHS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Right-hand-side-RHS-取值來自於右邊的變數上"><span class="nav-number">2.1.</span> <span class="nav-text">Right-hand side (RHS 取值來自於右邊的變數上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Left-hand-side-LHS-用來賦予值到左側的變數上"><span class="nav-number">2.2.</span> <span class="nav-text">Left-hand side (LHS 用來賦予值到左側的變數上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#語法作用域-Lexical-scope"><span class="nav-number">2.3.</span> <span class="nav-text">| 語法作用域(Lexical scope)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

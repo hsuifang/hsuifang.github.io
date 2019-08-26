@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[執行環境、作用域 (Jedna)]]></title>
+    <url>%2F2019%2F08%2F26%2F%E5%9F%B7%E8%A1%8C%E7%92%B0%E5%A2%83%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
+    <content type="text"><![CDATA[| JavaScript 如何運行JS是一個進直譯式語言, 透過直譯器 -> 直接運行，也因此若發生錯誤時, 會直接反映在環境中！！！以下為運行的過程 ::: 語法基本單元化 (Tokenizing)一個一個值先一一拆解 抽象結構樹 AST (Abstract Syntax Tree)分析結構，如圖: 代碼生成 produce小工具 | LHS、 RHS認識他們，當錯誤發生時，可以藉由錯誤資訊，提升排除錯誤的效率 Right-hand side (RHS 取值來自於右邊的變數上)123Ex: var ming = ‘小明'var man = mingconsole.log(ming) !! 若有發生錯誤時，會在執行過程中見之 Left-hand side (LHS 用來賦予值到左側的變數上)1Ex: var ming = 'ming' !! 若發生LHS錯誤的時候，需要去檢查是不是左邊的變數無法被賦予值 | 語法作用域(Lexical scope) 分為靜態作用域及動態作用域JavaScript 採取的為靜態作用域 靜態作用域變數的作用域在語法解析的時候，就已經決定作用域 動態作用域變數的作用域在函式調用時才決定]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>六角學院 - JavaScript 核心篇</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Moja plany na ten tydzień]]></title>
     <url>%2F2019%2F08%2F24%2Ftydzien%2F</url>
     <content type="text"><![CDATA[今天上波蘭文課時，Emilia老師介紹了一個免費、好用的波文學習工具 - hello Polish裡面有依據分級的對話內容、文章、mp3, 身為通勤族，真是個好東西！ >> 星期名字 / 使用該日時的說法 >> Dni tygodnia Kiedy (w + biernik) 1. poniedziałek w poniedziałek 2. wtorek we wtorek 3. środa w środę 4. czwartek w czwartek 5. piątek w piątek 6. sobota w sobotę 7. niedziela w niedzielę >> Słownictwo >> wolny - freeTo może wtorek? Jesteś wolna? początek - beginning mieć dużo pracy –Tego dnia mam zawsze dużo pracy. kończyć (kończę, kończysz) / skończyćKończę o 5 (piątej). Co ty na to? – How about that? mieć wizytę u lekarza - 跟醫生預約（一定使用這種用法）Mam wizytę u lekarza, a potem muszę pojechać do rodziców. zmęczony - tiredPo basenie(#6) zwykle jestem zmęczona. pasuje mi - it sounds fine for mePasuje mi sobota(主詞). podobnie - similarly sukienka - dress zajęty - busyJej koleżanka jest zajęta 來源: Hello Polish]]></content>
