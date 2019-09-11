@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[RegExp - Evaluation Functions]]></title>
+    <url>%2F2019%2F09%2F11%2FRegExp%2F</url>
+    <content type="text"><![CDATA[正規表示式 A regular expression is an object that describes a pattern of characters.Regular expressions are used to perform pattern-matching and “search-and-replace” functions on text 首先先訂定一個pattern - /pattern/modifiers 123456789101112let re;re = /hello/re = /hello/i; // i = case insensitive/** modifier **/// i => case insensitive// g => Perform a global match(find all matches rather than stopping after the first match)// m => Perform multiline matchingconsole.log(re) // /hello/i;console.log(re.sourse) //hello 可以運用的方法exec() - Return result in an array or nullis used to retrieve the match of a regular expression in a string.這個pattern是否有在這個字串裡，有則回陣列，無則回null 1234const result = re.exec('hello world')console.log(result)// ["hello", index: 0, input: "hello world", groups: undefined]// index 是第幾個位置開始符合 test() - Return true or false 123const result = re.test('Hello')console.log(result)// true match() - Return result array or nullretrieves the specified value within a string or finds a match for one or more regular expressions.這個字串是否有符合這個pattern，有則回陣列，無則回null 1234const str = 'Hello There';const result = str.match(re)console.log(result)//["Hello", index: 0, input: "Hello There", groups: undefined] search() - Return index of the first match if not found return -1 1234const str = 'dd Hello There'const result = str.search(re)console.log(result)// 3 replace() - Return new string with some or all matchs of a pattern 1234const str = 'Hello There'const newStr = str.replace(re, 'Hi')console.log(newStr)// Hi There]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>RegExp</tag>
+        <tag>Modern JavaScript From The Beginning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[波蘭文-購物篇]]></title>
     <url>%2F2019%2F08%2F28%2F%E6%B3%A2%E8%98%AD%E6%96%87-%E8%B3%BC%E7%89%A9%E7%AF%87%2F</url>
     <content type="text"><![CDATA[| 百貨公司(Centrum Handlowe)內的店家名稱 komputery 💻🖥 księgarnia - 書店 elektronika - 電器行 optyk - 🕶眼鏡行 odzież - 服飾店/ ubranie obuwie - 鞋墊 / buty apteka - 💊 sklep spożywczy - 食品店 kwiaciarnia - 花店 | 造句 W sklepie spożywczym kupujemy owoce i chleb. W księgarni kupujemy ksążki, atlasy i map. W sklepie obuwniczym kupujemy buty. W kwiaciarni kupujemy bukiety(花束), róże i tulipany. W sklepie z elektroniką kupujemy telewizory i termometr(溫度計). W sklepie komputerowym kupujemy komputery i dyskietki(磁碟片). W aptece kupujemy termometr. W salonie optycznym kupujemy okulary(眼鏡).]]></content>

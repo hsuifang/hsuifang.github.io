@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning,">
 
 
 
@@ -77,14 +77,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="hsuifang.github.io/about/index.html">
+<meta name="description" content="正規表示式 A regular expression is an object that describes a pattern of characters.Regular expressions are used to perform pattern-matching and “search-and-replace” functions on text  首先先訂定一個pattern - /pa">
+<meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RegExp - Evaluation Functions">
+<meta property="og:url" content="hsuifang.github.io/2019/09/11/RegExp/index.html">
 <meta property="og:site_name" content="No Today !">
+<meta property="og:description" content="正規表示式 A regular expression is an object that describes a pattern of characters.Regular expressions are used to perform pattern-matching and “search-and-replace” functions on text  首先先訂定一個pattern - /pa">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-08-17T15:49:47.243Z">
+<meta property="og:updated_time" content="2019-09-11T15:02:03.505Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="RegExp - Evaluation Functions">
+<meta name="twitter:description" content="正規表示式 A regular expression is an object that describes a pattern of characters.Regular expressions are used to perform pattern-matching and “search-and-replace” functions on text  首先先訂定一個pattern - /pa">
 
 
 
@@ -114,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/about/">
+  <link rel="canonical" href="hsuifang.github.io/2019/09/11/RegExp/">
 
 
 
 
 
-  <title>about | No Today !</title>
+  <title>RegExp - Evaluation Functions | No Today !</title>
   
 
 
@@ -236,37 +240,191 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/09/11/RegExp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ifang Hsu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="No Today !">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="自我介紹"><a href="#自我介紹" class="headerlink" title="自我介紹"></a>自我介紹</h2><p>目前是一名前端工程師,<br>已點擊的技能包括HTML、CSS、Javascript<br>已點擊的前端框架為Vue.js</p>
-<blockquote>
-<p>書寫紀錄是希望在追逐前端技能的路上，暮然回首時，有成長的痕跡</p>
+          <h1 class="post-title" itemprop="name headline">RegExp - Evaluation Functions</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-11T22:25:27+08:00">
+                2019-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端學習/" itemprop="url" rel="index">
+                    <span itemprop="name">前端學習</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="正規表示式"><a href="#正規表示式" class="headerlink" title="正規表示式"></a>正規表示式</h2><blockquote>
+<p>A regular expression is an object that describes a pattern of characters.<br>Regular expressions are used to perform pattern-matching and “search-and-replace” functions on text</p>
 </blockquote>
+<p>首先先訂定一個pattern - <strong>/pattern/modifiers</strong></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let re;</span><br><span class="line">re = /hello/</span><br><span class="line">re = /hello/i; // i = case insensitive</span><br><span class="line"></span><br><span class="line">/** modifier **/</span><br><span class="line">// i => case insensitive</span><br><span class="line">// g => Perform a global match</span><br><span class="line">(find all matches rather than stopping after the first match)</span><br><span class="line">// m => Perform multiline matching</span><br><span class="line"></span><br><span class="line">console.log(re) // /hello/i;</span><br><span class="line">console.log(re.sourse) //hello</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="可以運用的方法"><a href="#可以運用的方法" class="headerlink" title="可以運用的方法"></a>可以運用的方法</h2><p><strong>exec()</strong> - Return result in an array or null<br>is used to retrieve the match of a regular expression in a string.<br>這個pattern是否有在這個字串裡，有則回陣列，無則回null</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const result = re.exec('hello world')</span><br><span class="line">console.log(result)</span><br><span class="line">// ["hello", index: 0, input: "hello world", groups: undefined]</span><br><span class="line">// index 是第幾個位置開始符合</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>test()</strong> - Return true or false</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const result = re.test('Hello')</span><br><span class="line">console.log(result)</span><br><span class="line">// true</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>match()</strong> - Return result array or null<br>retrieves the specified value within a string or finds a match for one or more regular expressions.<br>這個字串是否有符合這個pattern，有則回陣列，無則回null</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const str = 'Hello There';</span><br><span class="line">const result = str.match(re)</span><br><span class="line">console.log(result)</span><br><span class="line">//["Hello", index: 0, input: "Hello There", groups: undefined]</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>search()</strong> - Return index of the first match if not found return -1</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const str = 'dd Hello There'</span><br><span class="line">const result = str.search(re)</span><br><span class="line">console.log(result)</span><br><span class="line">// 3</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>replace()</strong> - Return new string with some or all matchs of a pattern</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const str = 'Hello There'</span><br><span class="line">const newStr = str.replace(re, 'Hi')</span><br><span class="line">console.log(newStr)</span><br><span class="line">// Hi There</span><br></pre></td></tr></tbody></table></figure>
+
 </body></html>
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
+          
+            <a href="/tags/Modern-JavaScript-From-The-Beginning/" rel="tag"># Modern JavaScript From The Beginning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/28/波蘭文-購物篇/" rel="next" title="波蘭文-購物篇">
+                <i class="fa fa-chevron-left"></i> 波蘭文-購物篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -391,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自我介紹"><span class="nav-number">1.</span> <span class="nav-text">自我介紹</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正規表示式"><span class="nav-number">1.</span> <span class="nav-text">正規表示式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以運用的方法"><span class="nav-number">2.</span> <span class="nav-text">可以運用的方法</span></a></li></ol></div>
             
 
           </div>
