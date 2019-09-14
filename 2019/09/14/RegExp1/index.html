@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,六角學院 - JavaScript 核心篇,">
+  <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning,">
 
 
 
@@ -77,20 +77,18 @@
 
 
 
-<meta name="description" content="|  JavaScript 如何運行JS是一個進直譯式語言, 透過直譯器 -&amp;gt; 直接運行，也因此若發生錯誤時, 會直接反映在環境中！！！以下為運行的過程 :::">
-<meta name="keywords" content="JavaScript,六角學院 - JavaScript 核心篇">
+<meta name="description" content="Metacharacters Symbols ^  =&amp;gt; Caret means must start with$  =&amp;gt; Must ends with, could matched with a word^$ =&amp;gt; Must begin and end with. =&amp;gt; Matches any ONE character* =&amp;gt;  Matches any character 0 or more">
+<meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="執行環境、作用域 (Jedna)">
-<meta property="og:url" content="hsuifang.github.io/2019/08/26/執行環境、作用域/index.html">
+<meta property="og:title" content="RegExp - Metacharacter Symbols">
+<meta property="og:url" content="hsuifang.github.io/2019/09/14/RegExp1/index.html">
 <meta property="og:site_name" content="No Today !">
-<meta property="og:description" content="|  JavaScript 如何運行JS是一個進直譯式語言, 透過直譯器 -&amp;gt; 直接運行，也因此若發生錯誤時, 會直接反映在環境中！！！以下為運行的過程 :::">
+<meta property="og:description" content="Metacharacters Symbols ^  =&amp;gt; Caret means must start with$  =&amp;gt; Must ends with, could matched with a word^$ =&amp;gt; Must begin and end with. =&amp;gt; Matches any ONE character* =&amp;gt;  Matches any character 0 or more">
 <meta property="og:locale" content="en-us">
-<meta property="og:image" content="https://live.staticflickr.com/65535/48624347761_a7288c40f0_z.jpg">
-<meta property="og:updated_time" content="2019-08-26T14:53:24.372Z">
+<meta property="og:updated_time" content="2019-09-14T15:24:47.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="執行環境、作用域 (Jedna)">
-<meta name="twitter:description" content="|  JavaScript 如何運行JS是一個進直譯式語言, 透過直譯器 -&amp;gt; 直接運行，也因此若發生錯誤時, 會直接反映在環境中！！！以下為運行的過程 :::">
-<meta name="twitter:image" content="https://live.staticflickr.com/65535/48624347761_a7288c40f0_z.jpg">
+<meta name="twitter:title" content="RegExp - Metacharacter Symbols">
+<meta name="twitter:description" content="Metacharacters Symbols ^  =&amp;gt; Caret means must start with$  =&amp;gt; Must ends with, could matched with a word^$ =&amp;gt; Must begin and end with. =&amp;gt; Matches any ONE character* =&amp;gt;  Matches any character 0 or more">
 
 
 
@@ -120,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/08/26/執行環境、作用域/">
+  <link rel="canonical" href="hsuifang.github.io/2019/09/14/RegExp1/">
 
 
 
 
 
-  <title>執行環境、作用域 (Jedna) | No Today !</title>
+  <title>RegExp - Metacharacter Symbols | No Today !</title>
   
 
 
@@ -254,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/08/26/執行環境、作用域/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/09/14/RegExp1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -271,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">執行環境、作用域 (Jedna)</h1>
+          <h1 class="post-title" itemprop="name headline">RegExp - Metacharacter Symbols</h1>
         
 
         <div class="post-meta">
@@ -283,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-26T22:22:15+08:00">
-                2019-08-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-14T23:02:02+08:00">
+                2019-09-14
               </time>
             
 
@@ -343,33 +341,13 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="JavaScript-如何運行"><a href="#JavaScript-如何運行" class="headerlink" title="|  JavaScript 如何運行"></a>|  JavaScript 如何運行</h2><p>JS是一個進直譯式語言, 透過直譯器 -> 直接運行，<br>也因此若發生錯誤時, 會直接反映在環境中！！！<br>以下為運行的過程 :::</p>
-<a id="more"></a>
-<ol>
-<li>語法基本單元化  (Tokenizing)<br>一個一個值先一一拆解</li>
-<li>抽象結構樹 AST (Abstract Syntax Tree)<br>分析結構，如圖:<br><img src="https://live.staticflickr.com/65535/48624347761_a7288c40f0_z.jpg" alt="AST"></li>
-<li>代碼生成</li>
-</ol>
-<p><a href="https://esprima.org/demo/parse.html#" target="_blank" rel="noopener">produce小工具</a></p>
-<hr>
-<h2 id="LHS、-RHS"><a href="#LHS、-RHS" class="headerlink" title="|  LHS、 RHS"></a>|  LHS、 RHS</h2><p>認識他們，當錯誤發生時，可以藉由錯誤資訊，提升排除錯誤的效率</p>
-<h3 id="Right-hand-side-RHS-取值來自於右邊的變數上"><a href="#Right-hand-side-RHS-取值來自於右邊的變數上" class="headerlink" title="Right-hand side (RHS 取值來自於右邊的變數上)"></a>Right-hand side (RHS 取值來自於右邊的變數上)</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ex: var ming = ‘小明'</span><br><span class="line">var man = ming</span><br><span class="line">console.log(ming)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>!! 若有發生錯誤時，會在執行過程中見之</p>
-<h3 id="Left-hand-side-LHS-用來賦予值到左側的變數上"><a href="#Left-hand-side-LHS-用來賦予值到左側的變數上" class="headerlink" title="Left-hand side (LHS 用來賦予值到左側的變數上)"></a>Left-hand side (LHS 用來賦予值到左側的變數上)</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ex:  var ming = 'ming'</span><br></pre></td></tr></tbody></table></figure>
-
-<p>!! 若發生LHS錯誤的時候，需要去檢查是不是左邊的變數無法被賦予值</p>
-<hr>
-<h3 id="語法作用域-Lexical-scope"><a href="#語法作用域-Lexical-scope" class="headerlink" title="| 語法作用域(Lexical scope)"></a>| 語法作用域(Lexical scope)</h3><blockquote>
-<p>分為靜態作用域及動態作用域<br>JavaScript 採取的為靜態作用域</p>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="Metacharacters-Symbols"><a href="#Metacharacters-Symbols" class="headerlink" title="Metacharacters Symbols"></a>Metacharacters Symbols</h2><blockquote>
+<p><strong>^</strong>  => Caret means must start with<br><strong>$</strong>  => Must ends with, could matched with a word<br><strong>^$</strong> => Must begin and end with<br><strong>.</strong> => Matches any ONE character<br><strong>*</strong> =>  Matches any character 0 or more times<br><strong>?</strong> => Optionals Charater<br><strong>\</strong> => Escape character</p>
 </blockquote>
-<ol>
-<li><p>靜態作用域<br>變數的作用域在語法解析的時候，就已經決定作用域</p>
-</li>
-<li><p>動態作用域<br>變數的作用域在函式調用時才決定</p>
-</li>
-</ol>
-</body></html>
+<a id="more"></a>
+<hr>
+<p>小試身手區區區</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">let re;</span><br><span class="line">// Literal Characters</span><br><span class="line">re = /hello/i</span><br><span class="line"></span><br><span class="line">// Metacharacters Symbols</span><br><span class="line">re = /^h/i; // 一定要以一個h字母開頭(in </span><br><span class="line">re = /d$/i; // 一定要以一個d字母結尾(in insensitive)</span><br><span class="line">re = /^hello$/i // 只有hello才符合, hello開頭, hello結尾</span><br><span class="line">re = /h.llo$/i // h 和llo組合，之間需有一個字</span><br><span class="line">re = /h*llo$/i // 只要是h 和llo組合，不論之間有多少文字(0或1以上)</span><br><span class="line">re = /gre?a?y/i // gray和grey都符合</span><br><span class="line">re = /gre?a?y\?/i // 加了escapse 符號，?就會被當作一般?, 而非options character</span><br><span class="line"></span><br><span class="line">// String to match</span><br><span class="line">const str = 'h1llo';</span><br><span class="line">const result = re.exec(str)</span><br><span class="line">console.log(result)</span><br><span class="line"></span><br><span class="line">// Log Results</span><br><span class="line">function reTest(re, str) {</span><br><span class="line">  if(re.test(str)) {</span><br><span class="line">    console.log(`${str} matches ${re.source}`)</span><br><span class="line">  } else {</span><br><span class="line">    console.log(`${str} does not matched ${re.source}`)</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">reTest(re, str)</span><br></pre></td></tr></tbody></table></figure></body></html>
       
     </div>
     
@@ -388,7 +366,9 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/六角學院-JavaScript-核心篇/" rel="tag"># 六角學院 - JavaScript 核心篇</a>
+            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
+          
+            <a href="/tags/Modern-JavaScript-From-The-Beginning/" rel="tag"># Modern JavaScript From The Beginning</a>
           
         </div>
       
@@ -401,8 +381,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/24/tydzien/" rel="next" title="Moja plany na ten tydzień">
-                <i class="fa fa-chevron-left"></i> Moja plany na ten tydzień
+              <a href="/2019/09/11/RegExp/" rel="next" title="RegExp - Evaluation Functions">
+                <i class="fa fa-chevron-left"></i> RegExp - Evaluation Functions
               </a>
             
           </div>
@@ -410,10 +390,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/28/波蘭文-購物篇/" rel="prev" title="波蘭文-購物篇">
-                波蘭文-購物篇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -557,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-如何運行"><span class="nav-number">1.</span> <span class="nav-text">|  JavaScript 如何運行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LHS、-RHS"><span class="nav-number">2.</span> <span class="nav-text">|  LHS、 RHS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Right-hand-side-RHS-取值來自於右邊的變數上"><span class="nav-number">2.1.</span> <span class="nav-text">Right-hand side (RHS 取值來自於右邊的變數上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Left-hand-side-LHS-用來賦予值到左側的變數上"><span class="nav-number">2.2.</span> <span class="nav-text">Left-hand side (LHS 用來賦予值到左側的變數上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#語法作用域-Lexical-scope"><span class="nav-number">2.3.</span> <span class="nav-text">| 語法作用域(Lexical scope)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Metacharacters-Symbols"><span class="nav-number">1.</span> <span class="nav-text">Metacharacters Symbols</span></a></li></ol></div>
             
 
           </div>
