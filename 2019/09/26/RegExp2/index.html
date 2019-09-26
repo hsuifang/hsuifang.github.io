@@ -77,15 +77,18 @@
 
 
 
+<meta name="description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
 <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Character Sets &amp; Quantifiers">
 <meta property="og:url" content="hsuifang.github.io/2019/09/26/RegExp2/index.html">
 <meta property="og:site_name" content="No Today !">
+<meta property="og:description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-09-26T12:56:08.668Z">
+<meta property="og:updated_time" content="2019-09-26T12:58:18.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Character Sets &amp; Quantifiers">
+<meta name="twitter:description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
 
 
 
@@ -342,6 +345,7 @@
 <h2 id="Brackets-Character-Sets"><a href="#Brackets-Character-Sets" class="headerlink" title="Brackets [] - Character Sets"></a>Brackets [] - Character Sets</h2><blockquote>
 <p>With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets <strong>[]</strong>. <a href="https://www.regular-expressions.info/charclass.html" target="_blank" rel="noopener"><code>參考來源</code></a></p>
 </blockquote>
+<a id="more"></a>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">re = /gr[ae]y/i  => Must be an a or e</span><br><span class="line">re = /[GF]ray/ => Must be a G or F</span><br><span class="line">re = /[^GF]ray/ => !! Match anything except a G or F</span><br><span class="line">re = /[A-Z]ray/ => Match any Uppercase letter</span><br><span class="line">re = /[a-z]ray/ => Match any Lowercase letter</span><br><span class="line">re = /[A-Za-z]ray/ => Match any letter</span><br><span class="line">re = /[0-9]ray/ => Match any digit; ！！10ray符合</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Curly-Braces-Quantifiers"><a href="#Curly-Braces-Quantifiers" class="headerlink" title="Curly Braces {} - Quantifiers"></a>Curly Braces {} - Quantifiers</h2><blockquote>
