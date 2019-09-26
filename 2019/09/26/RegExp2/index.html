@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="A1,hellopolish.pl,">
+  <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning,">
 
 
 
@@ -77,18 +77,15 @@
 
 
 
-<meta name="description" content="今天上波蘭文課時，Emilia老師介紹了一個免費、好用的波文學習工具 - hello Polish裡面有依據分級的對話內容、文章、mp3, 身為通勤族，真是個好東西！  &amp;gt;&amp;gt; 星期名字 / 使用該日時的說法 &amp;gt;&amp;gt;">
-<meta name="keywords" content="A1,hellopolish.pl">
+<meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Moja plany na ten tydzień">
-<meta property="og:url" content="hsuifang.github.io/2019/08/24/tydzien/index.html">
+<meta property="og:title" content="Character Sets &amp; Quantifiers">
+<meta property="og:url" content="hsuifang.github.io/2019/09/26/RegExp2/index.html">
 <meta property="og:site_name" content="No Today !">
-<meta property="og:description" content="今天上波蘭文課時，Emilia老師介紹了一個免費、好用的波文學習工具 - hello Polish裡面有依據分級的對話內容、文章、mp3, 身為通勤族，真是個好東西！  &amp;gt;&amp;gt; 星期名字 / 使用該日時的說法 &amp;gt;&amp;gt;">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-08-24T14:00:19.857Z">
+<meta property="og:updated_time" content="2019-09-26T12:56:08.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Moja plany na ten tydzień">
-<meta name="twitter:description" content="今天上波蘭文課時，Emilia老師介紹了一個免費、好用的波文學習工具 - hello Polish裡面有依據分級的對話內容、文章、mp3, 身為通勤族，真是個好東西！  &amp;gt;&amp;gt; 星期名字 / 使用該日時的說法 &amp;gt;&amp;gt;">
+<meta name="twitter:title" content="Character Sets &amp; Quantifiers">
 
 
 
@@ -118,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/08/24/tydzien/">
+  <link rel="canonical" href="hsuifang.github.io/2019/09/26/RegExp2/">
 
 
 
 
 
-  <title>Moja plany na ten tydzień | No Today !</title>
+  <title>Character Sets & Quantifiers | No Today !</title>
   
 
 
@@ -252,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/08/24/tydzien/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/09/26/RegExp2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +266,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Moja plany na ten tydzień</h1>
+          <h1 class="post-title" itemprop="name headline">Character Sets & Quantifiers</h1>
         
 
         <div class="post-meta">
@@ -281,8 +278,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-24T20:52:46+08:00">
-                2019-08-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-26T20:31:42+08:00">
+                2019-09-26
               </time>
             
 
@@ -304,8 +301,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/波蘭文-Mowic-po-polsku/" itemprop="url" rel="index">
-                    <span itemprop="name">波蘭文 | Mowić po polsku</span>
+                  <a href="/categories/前端學習/" itemprop="url" rel="index">
+                    <span itemprop="name">前端學習</span>
                   </a>
                 </span>
 
@@ -341,60 +338,19 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><blockquote>
-<p>今天上波蘭文課時，Emilia老師介紹了一個免費、好用的波文學習工具 - hello Polish<br>裡面有依據分級的對話內容、文章、mp3, 身為通勤族，真是個好東西！</p>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p><code>! Content：Brackets []、Braces {}、Peratheses ()</code></p>
+<h2 id="Brackets-Character-Sets"><a href="#Brackets-Character-Sets" class="headerlink" title="Brackets [] - Character Sets"></a>Brackets [] - Character Sets</h2><blockquote>
+<p>With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets <strong>[]</strong>. <a href="https://www.regular-expressions.info/charclass.html" target="_blank" rel="noopener"><code>參考來源</code></a></p>
 </blockquote>
-<h2 id="gt-gt-星期名字-使用該日時的說法-gt-gt"><a href="#gt-gt-星期名字-使用該日時的說法-gt-gt" class="headerlink" title=">> 星期名字 / 使用該日時的說法 >>"></a>>> 星期名字 / 使用該日時的說法 >></h2><a id="more"></a>
-<table>
-<thead>
-<tr>
-<th align="left">Dni tygodnia</th>
-<th align="left">Kiedy (w + biernik)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1. poniedziałek</td>
-<td align="left">w poniedziałek</td>
-</tr>
-<tr>
-<td align="left">2. wtorek</td>
-<td align="left">we wtorek</td>
-</tr>
-<tr>
-<td align="left">3. środa</td>
-<td align="left">w środę</td>
-</tr>
-<tr>
-<td align="left">4. czwartek</td>
-<td align="left">w czwartek</td>
-</tr>
-<tr>
-<td align="left">5. piątek</td>
-<td align="left">w piątek</td>
-</tr>
-<tr>
-<td align="left">6. sobota</td>
-<td align="left">w sobotę</td>
-</tr>
-<tr>
-<td align="left">7. niedziela</td>
-<td align="left">w niedzielę</td>
-</tr>
-</tbody></table>
-<h2 id="gt-gt-Slownictwo-gt-gt"><a href="#gt-gt-Slownictwo-gt-gt" class="headerlink" title=">> Słownictwo >>"></a>>> Słownictwo >></h2><ol>
-<li><strong><code>wolny</code></strong> - free<br>To może wtorek? Jesteś wolna?</li>
-<li><strong><code>początek</code></strong> - beginning</li>
-<li><strong><code>mieć dużo pracy –</code></strong><br>Tego dnia mam zawsze dużo pracy.</li>
-<li><strong><code>kończyć (kończę, kończysz) / skończyć</code></strong><br>Kończę o 5 (piątej).</li>
-<li><strong><code>Co ty na to?</code></strong> – How about that?</li>
-<li><strong><code>mieć wizytę u lekarza</code></strong> - 跟醫生預約（一定使用這種用法）<br>Mam wizytę u lekarza, a potem muszę pojechać do rodziców.</li>
-<li><strong><code>zmęczony</code></strong> - tired<br>Po basenie(#6) zwykle jestem zmęczona.</li>
-<li><strong><code>pasuje mi</code></strong> -  it sounds fine for me<br>Pasuje mi sobota(主詞).</li>
-<li><strong><code>podobnie</code></strong> - similarly</li>
-<li><strong><code>sukienka</code></strong> - dress</li>
-<li><strong><code>zajęty</code></strong> - busy<br>Jej koleżanka jest zajęta</li>
-</ol>
-<p>來源: <a href="https://www.hellopolish.pl/moje-plany-na-ten-tydzien-a1-slowniczek-en-es-ru/#" target="_blank" rel="noopener">Hello Polish</a></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">re = /gr[ae]y/i  => Must be an a or e</span><br><span class="line">re = /[GF]ray/ => Must be a G or F</span><br><span class="line">re = /[^GF]ray/ => !! Match anything except a G or F</span><br><span class="line">re = /[A-Z]ray/ => Match any Uppercase letter</span><br><span class="line">re = /[a-z]ray/ => Match any Lowercase letter</span><br><span class="line">re = /[A-Za-z]ray/ => Match any letter</span><br><span class="line">re = /[0-9]ray/ => Match any digit; ！！10ray符合</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Curly-Braces-Quantifiers"><a href="#Curly-Braces-Quantifiers" class="headerlink" title="Curly Braces {} - Quantifiers"></a>Curly Braces {} - Quantifiers</h2><blockquote>
+<p>curly braces are used by a quantifier with specific limits</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// the following are three different limits of [ l ]</span><br><span class="line"></span><br><span class="line">re = /Hel{2}o/i => Must occur exactly {m} amount of times</span><br><span class="line">re = /Hel{2,4}o/i // Must occur {m} amount of times based on numbers</span><br><span class="line">re = /Hel{2,}o/i // Must occur at least {m} times</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Peratheses-Grouping"><a href="#Peratheses-Grouping" class="headerlink" title="Peratheses () - Grouping"></a>Peratheses () - Grouping</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re = /([0-9]X){3}/ => 3 times</span><br><span class="line">re = /^([0-9]X){3}$/</span><br></pre></td></tr></tbody></table></figure>
+
 </body></html>
       
     </div>
@@ -412,9 +368,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/A1/" rel="tag"># A1</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/hellopolish-pl/" rel="tag"># hellopolish.pl</a>
+            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
+          
+            <a href="/tags/Modern-JavaScript-From-The-Beginning/" rel="tag"># Modern JavaScript From The Beginning</a>
           
         </div>
       
@@ -427,8 +385,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/22/午餐約會/" rel="next" title="午餐約會">
-                <i class="fa fa-chevron-left"></i> 午餐約會
+              <a href="/2019/09/14/RegExp1/" rel="next" title="RegExp - Metacharacter Symbols">
+                <i class="fa fa-chevron-left"></i> RegExp - Metacharacter Symbols
               </a>
             
           </div>
@@ -436,10 +394,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/26/執行環境、作用域/" rel="prev" title="執行環境、作用域 (Jedna)">
-                執行環境、作用域 (Jedna) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -583,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-gt-星期名字-使用該日時的說法-gt-gt"><span class="nav-number">1.</span> <span class="nav-text">&gt;&gt; 星期名字 / 使用該日時的說法 &gt;&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-gt-Slownictwo-gt-gt"><span class="nav-number">2.</span> <span class="nav-text">&gt;&gt; Słownictwo &gt;&gt;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brackets-Character-Sets"><span class="nav-number">1.</span> <span class="nav-text">Brackets [] - Character Sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Curly-Braces-Quantifiers"><span class="nav-number">2.</span> <span class="nav-text">Curly Braces {} - Quantifiers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peratheses-Grouping"><span class="nav-number">3.</span> <span class="nav-text">Peratheses () - Grouping</span></a></li></ol></div>
             
 
           </div>
