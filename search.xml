@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[this]]></title>
+    <url>%2F2019%2F12%2F10%2Fthis%2F</url>
+    <content type="text"><![CDATA[“THIS” 執行函式的時候就會產生，他是一個關鍵字 每個執行環境都有屬於自己的this 關鍵字 this它的指向跟我們怎麼「定義」它沒有關係 this 與函式如何宣告、建立沒有關聯性，僅與 「呼叫方法/執行」有關 || this 的調用方式A. 物件的方法調用 (最常見的形式) this 與函式如何宣告沒有關聯性，僅與呼叫方法有關物件的方法調用時，僅需要關注是在哪一個物件下呼叫 1234567891011var myName = '真心鎮大冒險'function callName () { console.log(this, this.myName)}var family = { myName: '小明家', callName: callName}family.callName() // {myName: "小明家", callName: ƒ} "小明家" B. 簡易呼叫 直接調用都是屬於simple Code, ex:: closure 、IIFE、callbackSimple Code this 指向全域, 但如果在嚴格模式下就會顯示undefined C. call, apply, Bind 方法!參考 12345678910111213141516171819202122var myName = '真心鎮大冒險'var family = { myName: '小明家'}function fn(para1, para2) { console.log(this, para1, para2)}// 第一個是帶入this物件// call 立刻執行// {myName: "小明家"} 1 2fn.call(family, 1, 2)// 帶入參數的方法用“”陣列// {myName: "小明家"} 2 3fn.apply(family, [2, 3]) // 不會立刻執行// 可以帶入部分參數// {myName: "小明家"} "JJ" “LL"var fn2 = fn.bind(family, 'JJ', 'LL’) fn2() D. NewE. DOM事件處理器 1 2 3 4 press Btn // this 是綁定 button 本身 &lt;li&gt;1&lt;/li&gt; &lt;li&gt;2&lt;/li&gt; &lt;button onclick=&quot;console.dir(this)&quot;&gt;press Btn&lt;/button&gt; &lt;script&gt; var fn = function () { console.dir(this) this.style.backgroundColor = &apos;orange&apos; } var els = document.querySelectorAll(&apos;li&apos;) for (var i = 0; i &lt; els.length; i++) { els[i].addEventListener(&apos;click&apos;, fn) } &lt;/script&gt; F. 箭頭函式]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>this</tag>
+        <tag>六角學院</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Character Sets & Quantifiers]]></title>
     <url>%2F2019%2F09%2F26%2FRegExp2%2F</url>
     <content type="text"><![CDATA[! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets []. 參考來源 1234567re = /gr[ae]y/i => Must be an a or ere = /[GF]ray/ => Must be a G or Fre = /[^GF]ray/ => !! Match anything except a G or Fre = /[A-Z]ray/ => Match any Uppercase letterre = /[a-z]ray/ => Match any Lowercase letterre = /[A-Za-z]ray/ => Match any letterre = /[0-9]ray/ => Match any digit; ！！10ray符合 Curly Braces {} - Quantifiers curly braces are used by a quantifier with specific limits 12345// the following are three different limits of [ l ]re = /Hel{2}o/i => Must occur exactly {m} amount of timesre = /Hel{2,4}o/i // Must occur {m} amount of times based on numbersre = /Hel{2,}o/i // Must occur at least {m} times Peratheses () - Grouping12re = /([0-9]X){3}/ => 3 timesre = /^([0-9]X){3}$/]]></content>
