@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[箭頭函式與傳統函式差異]]></title>
+    <url>%2F2019%2F12%2F14%2F%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F%E8%88%87%E5%82%B3%E7%B5%B1%E5%87%BD%E5%BC%8F%E5%B7%AE%E7%95%B0%2F</url>
+    <content type="text"><![CDATA[arguments 參數 、This、建構式 A. 沒有arguments 參數123456789101112131415// # 1. 沒有arguments 參數// 將以下改成Arrow Function，並觀察差異const nums = function () { console.log(arguments) // argument 參數是屬於類陣列}const nums = () => { console.log(arguments) // Uncaught ReferenceError: arguments is not defined}// 若還是要取其餘參數const nums = (...arg) => { console.log(arg)} B. 沒有自己的This This 綁定的差異箭頭函式沒有自己的This也無法透過 call, apply, bind 重新給予this 123456789101112131415161718192021222324252627var myName = '全域'var person = { myName: '小明', callName: function () { console.log('1', this.myName) // 1 小明 setTimeout(function() { console.log('2', this.myName) // 2 全域 }, 0) }, // 箭頭函式沒有自己的This, this 指向外層 callArrowName: function () { console.log('3', this.myName) // 3 小明 setTimeout(() => { console.log('4', this.myName) // 4 小明 }, 0) }, // 箭頭函式沒有自己的This, this 指向外層 callArrowName2 : () => { console.log('5', this.myName) // 5 全域 setTimeout(() => { console.log('6', this.myName) // 6 全域 }, 0) } }person.callName()person.callArrowName()person.callArrowName2() 箭頭函式是「無法」做建構函式使用1234567891011121314const Fn = function (a) { this.name = a}const ArrowFn = (a) => { this.name = a;}console.log(Fn.prototype, ArrowFn.prototype)// {constructor: ƒ} undefinedconst a = new Fn('a')console.log(a) //Fn {name: "a"}const b = new ArrowFn('b’) // ArrowFn is not a constructor]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>六角學院</tag>
+        <tag>arrowFunction</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[this]]></title>
     <url>%2F2019%2F12%2F10%2Fthis%2F</url>
     <content type="text"><![CDATA[“THIS” 執行函式的時候就會產生，他是一個關鍵字 每個執行環境都有屬於自己的this 關鍵字 this它的指向跟我們怎麼「定義」它沒有關係 this 與函式如何宣告、建立沒有關聯性，僅與 「呼叫方法/執行」有關 || this 的調用方式A. 物件的方法調用 (最常見的形式) this 與函式如何宣告沒有關聯性，僅與呼叫方法有關物件的方法調用時，僅需要關注是在哪一個物件下呼叫 1234567891011var myName = '真心鎮大冒險'function callName () { console.log(this, this.myName)}var family = { myName: '小明家', callName: callName}family.callName() // {myName: "小明家", callName: ƒ} "小明家" B. 簡易呼叫 直接調用都是屬於simple Code, ex:: closure 、IIFE、callbackSimple Code this 指向全域, 但如果在嚴格模式下就會顯示undefined C. call, apply, Bind 方法!參考 12345678910111213141516171819202122var myName = '真心鎮大冒險'var family = { myName: '小明家'}function fn(para1, para2) { console.log(this, para1, para2)}// 第一個是帶入this物件// call 立刻執行// {myName: "小明家"} 1 2fn.call(family, 1, 2)// 帶入參數的方法用“”陣列// {myName: "小明家"} 2 3fn.apply(family, [2, 3]) // 不會立刻執行// 可以帶入部分參數// {myName: "小明家"} "JJ" “LL"var fn2 = fn.bind(family, 'JJ', 'LL’) fn2() D. NewE. DOM事件處理器 1 2 3 4 press Btn // this 是綁定 button 本身 &lt;li&gt;1&lt;/li&gt; &lt;li&gt;2&lt;/li&gt; &lt;button onclick=&quot;console.dir(this)&quot;&gt;press Btn&lt;/button&gt; &lt;script&gt; var fn = function () { console.dir(this) this.style.backgroundColor = &apos;orange&apos; } var els = document.querySelectorAll(&apos;li&apos;) for (var i = 0; i &lt; els.length; i++) { els[i].addEventListener(&apos;click&apos;, fn) } &lt;/script&gt; F. 箭頭函式]]></content>
