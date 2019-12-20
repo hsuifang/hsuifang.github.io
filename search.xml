@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[滾動捲軸的應用]]></title>
+    <url>%2F2019%2F12%2F20%2F%E6%BB%BE%E5%8B%95%E6%8D%B2%E8%BB%B8%E7%9A%84%E6%87%89%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[|| 應用 How To Know I am at the very bottom side of document (用scroll 偵測到文件底部)document.body.offsetHeight = window.innerHeight + window.scrollY DOM Element offsetHeightThe offsetHeight property returns the viewable height of an element in pixels, including padding, border and scrollbar, but not the margin. Window Property innerHeightReturns the height of the window’s content area (viewport) including scrollbars innerWidth Returns the width of a window's content area (viewport) including scrollbars outerHeight Returns the height of the browser window, including toolbars/scrollbars outerWidth Returns the width of the browser window, including toolbars/scrollbars pageXOffset Returns the pixels the current document has been scrolled (horizontally) from the upper left corner of the window pageYOffset Returns the pixels the current document has been scrolled (vertically) from the upper left corner of the window scrollX An alias of pageXOffset scrollY An alias of pageYOffset Window Method scrollTo window.scrollTo(xpos, ypos) 滾動到特定位置, The scrollTo() method scrolls the document to the specified coordinates. scrollBy 滾動多少px, The scrollBy() method scrolls the document by the specified number of pixel]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>HTML DOM</tag>
+        <tag>DOM Window</tag>
+        <tag>DOM Element</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[箭頭函式與傳統函式差異]]></title>
     <url>%2F2019%2F12%2F14%2F%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F%E8%88%87%E5%82%B3%E7%B5%B1%E5%87%BD%E5%BC%8F%E5%B7%AE%E7%95%B0%2F</url>
     <content type="text"><![CDATA[arguments 參數 、This、建構式 A. 沒有arguments 參數123456789101112131415// # 1. 沒有arguments 參數// 將以下改成Arrow Function，並觀察差異const nums = function () { console.log(arguments) // argument 參數是屬於類陣列}const nums = () => { console.log(arguments) // Uncaught ReferenceError: arguments is not defined}// 若還是要取其餘參數const nums = (...arg) => { console.log(arg)} B. 沒有自己的This This 綁定的差異箭頭函式沒有自己的This也無法透過 call, apply, bind 重新給予this 123456789101112131415161718192021222324252627var myName = '全域'var person = { myName: '小明', callName: function () { console.log('1', this.myName) // 1 小明 setTimeout(function() { console.log('2', this.myName) // 2 全域 }, 0) }, // 箭頭函式沒有自己的This, this 指向外層 callArrowName: function () { console.log('3', this.myName) // 3 小明 setTimeout(() => { console.log('4', this.myName) // 4 小明 }, 0) }, // 箭頭函式沒有自己的This, this 指向外層 callArrowName2 : () => { console.log('5', this.myName) // 5 全域 setTimeout(() => { console.log('6', this.myName) // 6 全域 }, 0) } }person.callName()person.callArrowName()person.callArrowName2() 箭頭函式是「無法」做建構函式使用1234567891011121314const Fn = function (a) { this.name = a}const ArrowFn = (a) => { this.name = a;}console.log(Fn.prototype, ArrowFn.prototype)// {constructor: ƒ} undefinedconst a = new Fn('a')console.log(a) //Fn {name: "a"}const b = new ArrowFn('b’) // ArrowFn is not a constructor]]></content>
@@ -125,7 +138,7 @@
   <entry>
     <title><![CDATA[網頁安全性驗證]]></title>
     <url>%2F2019%2F08%2F17%2F%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%E6%80%A7%E9%A9%97%E8%AD%89%2F</url>
-    <content type="text"><![CDATA[含有內容、ISSUE、解決方式、後記 || 專案內容使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行LINE LOGIN 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。 || 專案ISSUE有位使用者複製LOGIN後的連結(含有UID資訊)，接著使用其他裝置點擊其連結，發現仍可以看到會員卡，故認為其有安全性的憂慮，且有違反歐洲的某的法規，因此要求改善。 || 解決方式 LINE LOGIN將Line 一次性的參數置入連結 前端人員取得連結參數, 打API再次驗證連結參數正確性 驗證成功後, Response Headers 多一個key 打API取會員卡資料時，Request Headers 多增加ㄧkey參數 若步驟2失敗時, 再走一次步驟1 || 後記 若之後其他使用者再複製此連結時，因為一次性參數原則，會再要求依據登入帳號密碼，執行LINE LOGIN驗證，也加強了安全性。 但這樣的一次性參數的安全性修正也苦了測試人員及開發人員，在手機端，因為是已登入APP狀態，所以不會要求輸入帳號密碼，也不會影響體驗 ; 但如果在網頁端，相關人員就要一直輸入帳號密碼或點擊確認輸入按鈕，嗚嗚嗚！ 美廉社 SimpleMart 經驗紀錄]]></content>
+    <content type="text"><![CDATA[含有內容、ISSUE、解決方式、後記 || 專案內容使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行LINE LOGIN 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。 || 專案ISSUE有位使用者複製LOGIN後的連結(含有UID資訊)，接著使用其他裝置點擊其連結，發現仍可以看到會員卡，故認為其有安全性的憂慮，且有違反歐洲的某的法規，因此要求改善。 || 解決方式 LINE LOGIN將Line 一次性的參數置入連結 前端人員取得連結參數, 打API再次驗證連結參數正確性 驗證成功後, Response Headers 多一個key 打API取會員卡資料時，Request Headers 多增加ㄧkey參數 若步驟2失敗時, 再走一次步驟1 || 後記 若之後其他使用者再複製此連結時，因為一次性參數原則，會再要求依據登入帳號密碼，執行LINE LOGIN驗證，也加強了安全性。 但這樣的一次性參數的安全性修正也苦了測試人員及開發人員，在手機端，因為是已登入APP狀態，所以不會要求輸入帳號密碼，也不會影響體驗 ; 但如果在網頁端，相關人員就要一直輸入帳號密碼或點擊確認輸入按鈕，嗚嗚嗚！]]></content>
       <categories>
         <category>專案</category>
       </categories>
