@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Grid]]></title>
+    <url>%2F2019%2F12%2F25%2F%E5%9C%B0%E4%B8%8B%E5%9F%8E1F-%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[簡述我在這挑戰JS地下城1F-九九乘法中，使用陌生GRID以及HTML、CSS、JS將九九乘法表呈現出來去完成它．以下簡述GRID… 1F原始檔、1F DEMO 定義與特性 MDN定義：格線是一組水平線和垂直線的交叉集合：一個定義為行（row），另一個定義為列（column）。你可以讓各元素依照行列的規則放到各格線上一切都建立要從建立格線容器（grid container）開始 格線佈局具有以下特性 ::: 尺寸設定具有彈性 固定：pixel 靈活：百分比、fr(此單位為因grid產生) 單元佈置 使用行號、名字、目標區域，讓各單元放到精確的位置 Creation of additional tracks to hold content 控制對齊 使用z-index控制重疊內容 格線容器 元件要成為格線容器時，需要定義容器的顯示類型。宣告以後，該元素的所有直接子元素會變成格線單位（grid item）set to grid or inline-grid 123.grid-container { display: grid;} 格線軌道（Grid Track） 透過 grid-template-columns 與 grid-template-rows 屬性定義了行與列，也定義了格線軌道。定義的數量代表了多少區塊 ex: 1fr 1fr = 2個區塊 格線軌道定義的單位與方式 單位 - fr 、 ％、px 123456789101112131415161718192021Ａ. fr單位>> 代表格線容器內可用空間的分塊（fraction)、可用比例的概念去理解.grid-container { display: grid; grid-template-columns: 1fr 1fr 1fr; // 3個區塊}B. %>> 以區塊為100%, 去切分需要的百分比.grid-container { display: grid; grid-template-columns: 20% 30% 50%;}C. px.grid-container { display: grid; grid-template-columns: 100px 100px;} 單位可以混用 1234.grid-container { display: grid; grid-template-columns: 500px 1fr 2fr;} repeat(次數, 值) - 以迴圈表現 1234.wrapper { display: grid; grid-template-columns: repeat(3, 1fr);} 軌道縮放與 minmax()希望有高度一定，但又不要跑版的情境，可以用minmax() 12345.wrapper { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(100px, auto);} 明式與暗式格線透過 grid-auto-rows 與 grid-auto-columns 屬性，給軌道定義一套大小。 12345.wrapper { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px;} 圖片來源：MDN Grid Lines Note!當我們定義一個格線(grid)，我們是定義一個區塊、一個grid track，而非線條、行．因為定義track 而產生 line Positioning items against lines（根據行、線定位項目） column => 由左線調至右線條，row => 由最上面線條至下方已 3 X 2 的 grid, column line 有4條， row line有3條，可參照圖片 grid-column-start grid-column-end grid-row-start grid-row-end grid-row grid-column1234567891011.wrapper { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 100px; } .box1 { grid-column-start: 1; grid-column-end: 4; grid-row-start: 1; grid-row-end: 3; } Gutters Gutters between grid cells can be created using the 「 grid-column-gap」、 「grid-row-gap」、「grid-gap」Gutters 所指的為下方區塊與區塊間的黃色部分 1234567// 使用方式.wrapper { display: grid; grid-template-columns: repeat(3, 1fr); grid-column-gap: 10px; grid-row-gap: 1em;} memo 內容器的定位模式，與 flex 使用方式一樣。 ex: justify-self nesting :: grid 可以再grid]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>六角學院</tag>
+        <tag>JS地下城</tag>
+        <tag>CSS</tag>
+        <tag>Grid</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[滾動捲軸的應用]]></title>
     <url>%2F2019%2F12%2F20%2F%E6%BB%BE%E5%8B%95%E6%8D%B2%E8%BB%B8%E7%9A%84%E6%87%89%E7%94%A8%2F</url>
     <content type="text"><![CDATA[|| 應用 How To Know I am at the very bottom side of document (用scroll 偵測到文件底部)document.body.offsetHeight = window.innerHeight + window.scrollY DOM Element offsetHeight The offsetHeight property returns the viewable height of an element in pixels, including padding, border and scrollbar, but not the margin. Window Property innerHeight Returns the height of the window's content area (viewport) including scrollbars innerWidth Returns the width of a window's content area (viewport) including scrollbars outerHeight Returns the height of the browser window, including toolbars/scrollbars outerWidth Returns the width of the browser window, including toolbars/scrollbars pageXOffset Returns the pixels the current document has been scrolled (horizontally) from the upper left corner of the window pageYOffset Returns the pixels the current document has been scrolled (vertically) from the upper left corner of the window scrollX An alias of pageXOffset scrollY An alias of pageYOffset Window Method scrollTo window.scrollTo(xpos, ypos) 滾動到特定位置, The scrollTo() method scrolls the document to the specified coordinates. scrollBy 滾動多少px, The scrollBy() method scrolls the document by the specified number of pixel]]></content>

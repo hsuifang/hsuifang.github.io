@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="en-us">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="六角學院,JS地下城,CSS,Grid,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="簡述我在這挑戰JS地下城1F-九九乘法中，使用陌生GRID以及HTML、CSS、JS將九九乘法表呈現出來去完成它．以下簡述GRID… 1F原始檔、1F DEMO">
+<meta name="keywords" content="六角學院,JS地下城,CSS,Grid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grid">
+<meta property="og:url" content="hsuifang.github.io/2019/12/25/地下城1F-九九乘法法/index.html">
+<meta property="og:site_name" content="Not Today !">
+<meta property="og:description" content="簡述我在這挑戰JS地下城1F-九九乘法中，使用陌生GRID以及HTML、CSS、JS將九九乘法表呈現出來去完成它．以下簡述GRID… 1F原始檔、1F DEMO">
+<meta property="og:locale" content="en-us">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/49279471343_a8b5dc5b72.jpg">
+<meta property="og:updated_time" content="2019-12-27T02:33:08.959Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Grid">
+<meta name="twitter:description" content="簡述我在這挑戰JS地下城1F-九九乘法中，使用陌生GRID以及HTML、CSS、JS將九九乘法表呈現出來去完成它．以下簡述GRID… 1F原始檔、1F DEMO">
+<meta name="twitter:image" content="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="hsuifang.github.io/2019/12/25/地下城1F-九九乘法法/">
+
+
+
+
+
+  <title>Grid | Not Today !</title>
+  
+
+
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85660089-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-85660089-1');
+    }
+  </script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Not Today !</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">F2E</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/12/25/地下城1F-九九乘法法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ifang Hsu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Not Today !">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Grid</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-25T21:04:12+08:00">
+                2019-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端學習/" itemprop="url" rel="index">
+                    <span itemprop="name">前端學習</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="簡述"><a href="#簡述" class="headerlink" title="簡述"></a>簡述</h2><p>我在這挑戰JS地下城1F-九九乘法中，使用陌生<strong>GRID</strong>以及HTML、CSS、JS將九九乘法表呈現出來去完成它．<br>以下簡述GRID…</p>
+<h6 id="1F原始檔、1F-DEMO"><a href="#1F原始檔、1F-DEMO" class="headerlink" title="1F原始檔、1F DEMO"></a><a href="https://github.com/hsuifang/clock" target="_blank" rel="noopener">1F原始檔</a>、<a href="https://hsuifang.github.io/clock/index.html">1F DEMO</a></h6><a id="more"></a>
+
+<h2 id="定義與特性"><a href="#定義與特性" class="headerlink" title="定義與特性"></a>定義與特性</h2><blockquote>
+<p>MDN定義：格線是一組水平線和垂直線的交叉集合：一個定義為行（row），另一個定義為列（column）。<br>你可以讓各元素依照行列的規則放到各格線上<br>一切都建立要從建立<strong>格線容器（grid container）</strong>開始</p>
+</blockquote>
+<p>格線佈局具有以下特性 :::</p>
+<ol>
+<li>尺寸設定具有彈性<ul>
+<li>固定：pixel</li>
+<li>靈活：百分比、fr(此單位為因grid產生)</li>
+</ul>
+</li>
+<li>單元佈置<ul>
+<li>使用行號、名字、目標區域，讓各單元放到精確的位置</li>
+</ul>
+</li>
+<li>Creation of additional tracks to hold content</li>
+<li>控制對齊</li>
+<li>使用z-index控制重疊內容<br><br><br></li>
+</ol>
+<h3 id="格線容器"><a href="#格線容器" class="headerlink" title="格線容器"></a>格線容器</h3><blockquote>
+<p>元件要成為格線容器時，需要定義容器的顯示類型。<br>宣告以後，該元素的所有直接子元素會變成格線單位（grid item）<br>set to grid or inline-grid</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.grid-container {</span><br><span class="line">  display: grid;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="格線軌道（Grid-Track）"><a href="#格線軌道（Grid-Track）" class="headerlink" title="格線軌道（Grid Track）"></a>格線軌道（Grid Track）</h3><blockquote>
+<p>透過 grid-template-columns 與 grid-template-rows 屬性定義了行與列，也定義了格線軌道。<br>定義的數量代表了多少區塊 ex: 1fr 1fr = 2個區塊</p>
+</blockquote>
+<h4 id="格線軌道定義的單位與方式"><a href="#格線軌道定義的單位與方式" class="headerlink" title="格線軌道定義的單位與方式"></a>格線軌道定義的單位與方式</h4><ol>
+<li>單位 - fr 、 ％、px</li>
+</ol>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Ａ. <strong>fr單位</strong></span><br><span class="line">>> 代表格線容器內可用空間的分塊（fraction)、可用比例的概念去理解</span><br><span class="line"></span><br><span class="line">.grid-container {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 1fr 1fr 1fr; // 3個區塊</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">B. <strong>%</strong></span><br><span class="line">>> 以區塊為100%, 去切分需要的百分比</span><br><span class="line"></span><br><span class="line">.grid-container {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 20% 30% 50%;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">C. <strong>px</strong></span><br><span class="line">.grid-container {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 100px 100px;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li><p>單位可以混用</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.grid-container {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 500px 1fr 2fr;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>repeat(次數, 值) - 以迴圈表現</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.wrapper {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: repeat(3, 1fr);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>軌道縮放與 minmax()<br>希望有高度一定，但又不要跑版的情境，可以用minmax()</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: repeat(3, 1fr);</span><br><span class="line">  grid-auto-rows: minmax(100px, auto);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>明式與暗式格線<br>透過 grid-auto-rows 與 grid-auto-columns 屬性，給軌道定義一套大小。</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper {</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: repeat(3, 1fr);</span><br><span class="line">  grid-auto-rows: 200px;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
+<p><code>圖片來源：MDN</code><br><img src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" alt="mdnGrid"></p>
+<h3 id="Grid-Lines"><a href="#Grid-Lines" class="headerlink" title="Grid Lines"></a>Grid Lines</h3><blockquote>
+<p>Note!<br>當我們定義一個格線(grid)，我們是定義一個區塊、一個grid track，而非線條、行．<br>因為定義track 而產生 line</p>
+</blockquote>
+<h4 id="Positioning-items-against-lines（根據行、線定位項目）"><a href="#Positioning-items-against-lines（根據行、線定位項目）" class="headerlink" title="Positioning items against lines（根據行、線定位項目）"></a>Positioning items against lines（根據行、線定位項目）</h4><blockquote>
+<p>column => 由左線調至右線條，row => 由最上面線條至下方<br>已 3 X 2 的 grid, column line 有4條， row line有3條，可參照圖片</p>
+</blockquote>
+<ul>
+<li>grid-column-start</li>
+<li>grid-column-end</li>
+<li>grid-row-start</li>
+<li>grid-row-end</li>
+<li>grid-row</li>
+<li>grid-column<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.wrapper { </span><br><span class="line">    display: grid; </span><br><span class="line">    grid-template-columns: repeat(3, 1fr); </span><br><span class="line">    grid-auto-rows: 100px; </span><br><span class="line">} </span><br><span class="line">.box1 { </span><br><span class="line">    grid-column-start: 1; </span><br><span class="line">    grid-column-end: 4; </span><br><span class="line">    grid-row-start: 1; </span><br><span class="line">    grid-row-end: 3; </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ul>
+<h3 id="Gutters"><a href="#Gutters" class="headerlink" title="Gutters"></a>Gutters</h3><blockquote>
+<p>Gutters between grid cells can be created using the 「 grid-column-gap」、 「grid-row-gap」、「grid-gap」<br>Gutters 所指的為下方區塊與區塊間的黃色部分</p>
+</blockquote>
+<br>
+
+<p><img src="https://live.staticflickr.com/65535/49279471343_a8b5dc5b72.jpg" alt="gutter"></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 使用方式</span><br><span class="line">.wrapper {</span><br><span class="line">   display: grid;</span><br><span class="line">   grid-template-columns: repeat(3, 1fr);</span><br><span class="line">   grid-column-gap: 10px;</span><br><span class="line">   grid-row-gap: 1em;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="memo"><a href="#memo" class="headerlink" title="memo"></a>memo</h3><ol>
+<li>內容器的定位模式，與 flex 使用方式一樣。 ex: justify-self</li>
+<li>nesting :: grid 可以再grid</li>
+</ol>
+</body></html>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/六角學院/" rel="tag"># 六角學院</a>
+          
+            <a href="/tags/JS地下城/" rel="tag"># JS地下城</a>
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/Grid/" rel="tag"># Grid</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/20/滾動捲軸的應用/" rel="next" title="滾動捲軸的應用">
+                <i class="fa fa-chevron-left"></i> 滾動捲軸的應用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Ifang Hsu">
+            
+              <p class="site-author-name" itemprop="name">Ifang Hsu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hsuifang080318@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#簡述"><span class="nav-number">1.</span> <span class="nav-text">簡述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1F原始檔、1F-DEMO"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">1F原始檔、1F DEMO</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#定義與特性"><span class="nav-number">2.</span> <span class="nav-text">定義與特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格線容器"><span class="nav-number">2.1.</span> <span class="nav-text">格線容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格線軌道（Grid-Track）"><span class="nav-number">2.2.</span> <span class="nav-text">格線軌道（Grid Track）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#格線軌道定義的單位與方式"><span class="nav-number">2.2.1.</span> <span class="nav-text">格線軌道定義的單位與方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grid-Lines"><span class="nav-number">2.3.</span> <span class="nav-text">Grid Lines</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Positioning-items-against-lines（根據行、線定位項目）"><span class="nav-number">2.3.1.</span> <span class="nav-text">Positioning items against lines（根據行、線定位項目）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gutters"><span class="nav-number">2.4.</span> <span class="nav-text">Gutters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#memo"><span class="nav-number">2.5.</span> <span class="nav-text">memo</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ifang Hsu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
