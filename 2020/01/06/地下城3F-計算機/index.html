@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,六角學院,arrowFunction,箭頭函式,">
+  <meta name="keywords" content="六角學院,JS地下城,toLocaleString,slice,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="arguments 參數 、This、建構式">
-<meta name="keywords" content="JavaScript,六角學院,arrowFunction,箭頭函式">
+<meta name="description" content="想說這任務應該不會太難吧(總是太天真)，但一但開始執行後，就會冒出好多好多問題使用哪種方式切版？ GRID使用哪種方式寫邏輯？ 就vue吧使用哪種計算機比較符合這樣的UI呈現？ IOS 計算機要如何輸入完後，取運算值和子來用？要如何三位一撇？以下來記錄這次的新收穫…..">
+<meta name="keywords" content="六角學院,JS地下城,toLocaleString,slice">
 <meta property="og:type" content="article">
-<meta property="og:title" content="箭頭函式與傳統函式差異">
-<meta property="og:url" content="hsuifang.github.io/2019/12/14/箭頭函式與傳統函式差異/index.html">
+<meta property="og:title" content="地下城3F-計算機">
+<meta property="og:url" content="hsuifang.github.io/2020/01/06/地下城3F-計算機/index.html">
 <meta property="og:site_name" content="Not Today !">
-<meta property="og:description" content="arguments 參數 、This、建構式">
+<meta property="og:description" content="想說這任務應該不會太難吧(總是太天真)，但一但開始執行後，就會冒出好多好多問題使用哪種方式切版？ GRID使用哪種方式寫邏輯？ 就vue吧使用哪種計算機比較符合這樣的UI呈現？ IOS 計算機要如何輸入完後，取運算值和子來用？要如何三位一撇？以下來記錄這次的新收穫…..">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-12-20T02:15:53.733Z">
+<meta property="og:updated_time" content="2020-01-06T12:59:21.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="箭頭函式與傳統函式差異">
-<meta name="twitter:description" content="arguments 參數 、This、建構式">
+<meta name="twitter:title" content="地下城3F-計算機">
+<meta name="twitter:description" content="想說這任務應該不會太難吧(總是太天真)，但一但開始執行後，就會冒出好多好多問題使用哪種方式切版？ GRID使用哪種方式寫邏輯？ 就vue吧使用哪種計算機比較符合這樣的UI呈現？ IOS 計算機要如何輸入完後，取運算值和子來用？要如何三位一撇？以下來記錄這次的新收穫…..">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/12/14/箭頭函式與傳統函式差異/">
+  <link rel="canonical" href="hsuifang.github.io/2020/01/06/地下城3F-計算機/">
 
 
 
 
 
-  <title>箭頭函式與傳統函式差異 | Not Today !</title>
+  <title>地下城3F-計算機 | Not Today !</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/12/14/箭頭函式與傳統函式差異/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/01/06/地下城3F-計算機/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">箭頭函式與傳統函式差異</h1>
+          <h1 class="post-title" itemprop="name headline">地下城3F-計算機</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-14T16:58:54+08:00">
-                2019-12-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-06T16:35:29+08:00">
+                2020-01-06
               </time>
             
 
@@ -341,18 +341,56 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><blockquote>
-<p>arguments 參數 、This、建構式</p>
-</blockquote>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p>想說這任務應該不會太難吧(總是太天真)，但一但開始執行後，就會冒出好多好多問題<br>使用哪種方式切版？ GRID<br>使用哪種方式寫邏輯？ 就vue吧<br>使用哪種計算機比較符合這樣的UI呈現？ IOS 計算機<br>要如何輸入完後，取運算值和子來用？<br>要如何三位一撇？<br>以下來記錄這次的新收穫<br>…<br>..</p>
 <a id="more"></a>
-<h2 id="A-沒有arguments-參數"><a href="#A-沒有arguments-參數" class="headerlink" title="A. 沒有arguments 參數"></a>A. 沒有arguments 參數</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// # 1. 沒有arguments 參數</span><br><span class="line">// 將以下改成Arrow Function，並觀察差異</span><br><span class="line">const nums = function () {</span><br><span class="line">  console.log(arguments)</span><br><span class="line">  // argument 參數是屬於類陣列</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">const nums = () => {</span><br><span class="line">  console.log(arguments)</span><br><span class="line">  <strong>// Uncaught ReferenceError: arguments is not defined</strong></span><br><span class="line">}</span><br><span class="line">// 若還是要取其餘參數</span><br><span class="line">const nums = (...arg) => {</span><br><span class="line">  console.log(arg)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="B-沒有自己的This"><a href="#B-沒有自己的This" class="headerlink" title="B. 沒有自己的This"></a>B. 沒有自己的This</h2><blockquote>
-<p>This 綁定的差異<br>箭頭函式沒有自己的This<br>也無法透過 call, apply, bind 重新給予this</p>
+<h2 id="基本邏輯"><a href="#基本邏輯" class="headerlink" title="基本邏輯"></a>基本邏輯</h2><ol>
+<li><p>串連值(0-9 、00.)及運算子(+、-、x、/)至一個變數</p>
+</li>
+<li><p>點擊＝時，用regEp切分出運算子和值 ex: 1x2+2 => [1, 2, 2] [x, +]</p>
+</li>
+<li><p>先乘除後加減，藉由運算子的位置，得知數值位置，再搭配splice 移除再新增</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let index = a.indexOf(items)</span><br><span class="line">while (index !== -1) {</span><br><span class="line">  calculatorString.splice(index, 2, calculatorString[index] * calculatorString[index + 1])</span><br><span class="line">  calculatorOperators.splice(index, 1)</span><br><span class="line">  index = calculatorOperators.indexOf(items)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>顯示最終剩下的數值至變數</p>
+</li>
+</ol>
+<h2 id="Number-prototype-toLocaleString"><a href="#Number-prototype-toLocaleString" class="headerlink" title="Number.prototype.toLocaleString()"></a>Number.prototype.toLocaleString()</h2><blockquote>
+<p>將這個方法用於此任務的<u>三位一撇</u></p>
 </blockquote>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var myName = '全域'</span><br><span class="line">var person = {</span><br><span class="line">   myName: '小明',</span><br><span class="line">   callName: function () {</span><br><span class="line">     console.log('1', this.myName) // 1 小明</span><br><span class="line">     setTimeout(function() {</span><br><span class="line">       console.log('2', this.myName) // 2 全域</span><br><span class="line">     }, 0)</span><br><span class="line">   },</span><br><span class="line">   // 箭頭函式沒有自己的This, this 指向外層</span><br><span class="line">   callArrowName: function () {</span><br><span class="line">     console.log('3', this.myName) // 3 小明</span><br><span class="line">     setTimeout(() => {</span><br><span class="line">       console.log('4', this.myName) <strong>// 4 小明</strong></span><br><span class="line">     }, 0)</span><br><span class="line">   },</span><br><span class="line">   // 箭頭函式沒有自己的This, this 指向外層</span><br><span class="line">   callArrowName2 : () => {</span><br><span class="line">     console.log('5', this.myName) <strong>// 5 全域 </strong></span><br><span class="line">     setTimeout(() => {</span><br><span class="line">       console.log('6', this.myName) <strong>// 6 全域 </strong></span><br><span class="line">     }, 0)</span><br><span class="line">   }</span><br><span class="line"> }</span><br><span class="line">person.callName()</span><br><span class="line">person.callArrowName()</span><br><span class="line">person.callArrowName2()</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="箭頭函式是「無法」做建構函式使用"><a href="#箭頭函式是「無法」做建構函式使用" class="headerlink" title="箭頭函式是「無法」做建構函式使用"></a>箭頭函式是「無法」做建構函式使用</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const Fn = function (a) {</span><br><span class="line">  this.name = a</span><br><span class="line">}</span><br><span class="line">const ArrowFn = (a) => {</span><br><span class="line">  this.name = a;</span><br><span class="line">}</span><br><span class="line">console.log(Fn.prototype, ArrowFn.prototype)</span><br><span class="line"><strong>// {constructor: ƒ} undefined</strong></span><br><span class="line"></span><br><span class="line">const a = new Fn('a')</span><br><span class="line">console.log(a) //Fn {name: "a"}</span><br><span class="line"></span><br><span class="line">const b = new ArrowFn('b’)  </span><br><span class="line"><strong>// ArrowFn is not a constructor</strong></span><br></pre></td></tr></tbody></table></figure></body></html>
+<ul>
+<li><strong>numObj.toLocaleString([locales [, options]])</strong></li>
+<li>locales: 國家、區域的format</li>
+<li>options: 樣式（decimal(預設)、幣別、%、unit)、呈現等等..<br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString" target="_blank" rel="noopener">MDN</a></li>
+</ul>
+<h2 id="String-prototype-slice"><a href="#String-prototype-slice" class="headerlink" title="String.prototype.slice()"></a>String.prototype.slice()</h2><blockquote>
+<p>Method1::: Use to remove the last character from a string </p>
+</blockquote>
+<ul>
+<li>extracts a section of a string and returns it as a new string, without modifying the original string.</li>
+<li><strong>str.slice([begin[, end]])</strong></li>
+<li>begin: 哪一個索引（起始為 0）開始提取。若是負的(ex: -3)，等於是str.length + beginIndex(-3)</li>
+<li>end: 提取值至其索引，不包含其本身,ex: (0, 2), 取0, 1。 負數概念如begin。<br><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/slice" target="_blank" rel="noopener">MDN</a></li>
+</ul>
+<h2 id="String-prototype-substring"><a href="#String-prototype-substring" class="headerlink" title="String.prototype.substring()"></a>String.prototype.substring()</h2><blockquote>
+<p>Method2::: Use to remove the last character from a string</p>
+</blockquote>
+<ul>
+<li>returns the part of the string between the start and end indexes, or to the end of the string.</li>
+<li><strong>str.substring(indexStart[, indexEnd])</strong></li>
+<li>indexStart: 第幾個索引開始（起始為 0）提取。</li>
+<li>indexEnd[optional]: 至第幾個索引，其為不包含。若沒有寫則為至最後被包含<br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring" target="_blank" rel="noopener">MDN</a></li>
+</ul>
+<h2 id="Differences-between-substring-and-slice"><a href="#Differences-between-substring-and-slice" class="headerlink" title="Differences between substring() and slice()"></a>Differences between substring() and slice()</h2><blockquote>
+<p>雖然slice和substring幾乎用起來一樣，但還是有些為的差異性</p>
+</blockquote>
+<ol>
+<li><p>第一個值比第二個值大的時候：substring會調換起、迄值; 而slice會回空值</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let text = 'hsuifang'</span><br><span class="line">console.log(text.substring(5, 2))  // => "uif" </span><br><span class="line">console.log(text.slice(5, 2))   // => ""</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>當一或兩個值是負數或NaN: substring會皆視作是0; 而slice視NaN為0, 視負數為從字串最後面數回來</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">## substring</span><br><span class="line">console.log(text.substring(-5, 2))  // => "hs"</span><br><span class="line">console.log(text.substring(-5, -2)) // => "" </span><br><span class="line"></span><br><span class="line">## slice</span><br><span class="line">console.log(text.substring(-5, 2))  // => ""</span><br><span class="line">console.log(text.substring(-5, -2)) // => "ifa"</span><br></pre></td></tr></tbody></table></figure></li>
+</ol>
+</body></html>
       
     </div>
     
@@ -369,13 +407,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
-          
             <a href="/tags/六角學院/" rel="tag"># 六角學院</a>
           
-            <a href="/tags/arrowFunction/" rel="tag"># arrowFunction</a>
+            <a href="/tags/JS地下城/" rel="tag"># JS地下城</a>
           
-            <a href="/tags/箭頭函式/" rel="tag"># 箭頭函式</a>
+            <a href="/tags/toLocaleString/" rel="tag"># toLocaleString</a>
+          
+            <a href="/tags/slice/" rel="tag"># slice</a>
           
         </div>
       
@@ -388,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/10/this/" rel="next" title="this">
-                <i class="fa fa-chevron-left"></i> this
+              <a href="/2019/12/25/地下城1F-九九乘法法/" rel="next" title="Grid">
+                <i class="fa fa-chevron-left"></i> Grid
               </a>
             
           </div>
@@ -397,10 +435,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/20/滾動捲軸的應用/" rel="prev" title="滾動捲軸的應用">
-                滾動捲軸的應用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-沒有arguments-參數"><span class="nav-number">1.</span> <span class="nav-text">A. 沒有arguments 參數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#B-沒有自己的This"><span class="nav-number">2.</span> <span class="nav-text">B. 沒有自己的This</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#箭頭函式是「無法」做建構函式使用"><span class="nav-number">3.</span> <span class="nav-text">箭頭函式是「無法」做建構函式使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本邏輯"><span class="nav-number">1.</span> <span class="nav-text">基本邏輯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Number-prototype-toLocaleString"><span class="nav-number">2.</span> <span class="nav-text">Number.prototype.toLocaleString()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-prototype-slice"><span class="nav-number">3.</span> <span class="nav-text">String.prototype.slice()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-prototype-substring"><span class="nav-number">4.</span> <span class="nav-text">String.prototype.substring()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Differences-between-substring-and-slice"><span class="nav-number">5.</span> <span class="nav-text">Differences between substring() and slice()</span></a></li></ol></div>
             
 
           </div>
