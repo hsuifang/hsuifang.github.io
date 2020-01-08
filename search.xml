@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[地下城4F-世界時鐘]]></title>
+    <url>%2F2020%2F01%2F07%2F%E5%9C%B0%E4%B8%8B%E5%9F%8E4F-%E4%B8%96%E7%95%8C%E6%99%82%E9%90%98%2F</url>
+    <content type="text"><![CDATA[Date.prototype.toLocaleString()MDN、w3schools對比上一關也有運用到此方法，這次因為各區域時間表示方法有差異，ex: 我在台灣，但我要顯示英文，所以我參考了文件，運用locales和options，來達成我的顯示目標 ···4F原始碼、4F畫面 Date() Date 物件是基於世界標準時間（UTC） 1970/1/1開始的毫秒數值來儲存時間。Date 物件只能由以 Date 作為建構子來產生 MDN 什麼是GMT？Greenwich Mean Time(GMT / 格林威治時間)格林威治標準時間的正午是指當平太陽橫穿格林威治子午線時（也就是在格林威治上空最高點時）的時間。 什麼是UTC?Coordinated Universal Time (UTC/ 世界協調時間).為了解決GMT時間流逝不均勻的問題，使用原子鐘來定義時間。 The difference between GMT and UTCGMT is am actual time zone, whereas UTC is a time standard that is used to keep time sync across the world TimeStamp時間戳記或稱為時間標記（英語：Timestamp）是指字符串或編碼訊息用於辨識記錄下來的時間日期。國際標準為ISO 8601。]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>JS地下城</tag>
+        <tag>toLocaleString</tag>
+        <tag>Date</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[地下城3F-計算機]]></title>
     <url>%2F2020%2F01%2F06%2F%E5%9C%B0%E4%B8%8B%E5%9F%8E3F-%E8%A8%88%E7%AE%97%E6%A9%9F%2F</url>
     <content type="text"><![CDATA[想說這任務應該不會太難吧(總是太天真)，但一但開始執行後，就會冒出好多好多問題使用哪種方式切版？ GRID使用哪種方式寫邏輯？ 就vue吧使用哪種計算機比較符合這樣的UI呈現？ IOS 計算機要如何輸入完後，取運算值和子來用？要如何三位一撇？以下來記錄這次的新收穫….. 基本邏輯 串連值(0-9 、00.)及運算子(+、-、x、/)至一個變數 點擊＝時，用regEp切分出運算子和值 ex: 1x2+2 => [1, 2, 2] [x, +] 先乘除後加減，藉由運算子的位置，得知數值位置，再搭配splice 移除再新增 123456let index = a.indexOf(items)while (index !== -1) { calculatorString.splice(index, 2, calculatorString[index] * calculatorString[index + 1]) calculatorOperators.splice(index, 1) index = calculatorOperators.indexOf(items)} 顯示最終剩下的數值至變數 Number.prototype.toLocaleString() 將這個方法用於此任務的三位一撇 numObj.toLocaleString([locales [, options]]) locales: 國家、區域的format options: 樣式（decimal(預設)、幣別、%、unit)、呈現等等..MDN String.prototype.slice() Method1::: Use to remove the last character from a string extracts a section of a string and returns it as a new string, without modifying the original string. str.slice([begin[, end]]) begin: 哪一個索引（起始為 0）開始提取。若是負的(ex: -3)，等於是str.length + beginIndex(-3) end: 提取值至其索引，不包含其本身,ex: (0, 2), 取0, 1。 負數概念如begin。MDN String.prototype.substring() Method2::: Use to remove the last character from a string returns the part of the string between the start and end indexes, or to the end of the string. str.substring(indexStart[, indexEnd]) indexStart: 第幾個索引開始（起始為 0）提取。 indexEnd[optional]: 至第幾個索引，其為不包含。若沒有寫則為至最後被包含MDN Differences between substring() and slice() 雖然slice和substring幾乎用起來一樣，但還是有些為的差異性 第一個值比第二個值大的時候：substring會調換起、迄值; 而slice會回空值 123let text = 'hsuifang'console.log(text.substring(5, 2)) // => "uif" console.log(text.slice(5, 2)) // => "" 當一或兩個值是負數或NaN: substring會皆視作是0; 而slice視NaN為0, 視負數為從字串最後面數回來 1234567## substringconsole.log(text.substring(-5, 2)) // => "hs"console.log(text.substring(-5, -2)) // => "" ## sliceconsole.log(text.substring(-5, 2)) // => ""console.log(text.substring(-5, -2)) // => "ifa"]]></content>
@@ -8,7 +21,6 @@
         <category>前端學習</category>
       </categories>
       <tags>
-        <tag>六角學院</tag>
         <tag>JS地下城</tag>
         <tag>toLocaleString</tag>
         <tag>slice</tag>
@@ -22,7 +34,6 @@
         <category>前端學習</category>
       </categories>
       <tags>
-        <tag>六角學院</tag>
         <tag>JS地下城</tag>
         <tag>CSS</tag>
         <tag>Grid</tag>
