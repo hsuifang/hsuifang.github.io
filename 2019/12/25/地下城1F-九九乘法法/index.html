@@ -87,7 +87,7 @@
 <meta property="og:locale" content="en-us">
 <meta property="og:image" content="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png">
 <meta property="og:image" content="https://live.staticflickr.com/65535/49279471343_a8b5dc5b72.jpg">
-<meta property="og:updated_time" content="2020-01-07T10:26:16.034Z">
+<meta property="og:updated_time" content="2020-01-17T01:45:12.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Grid">
 <meta name="twitter:description" content="簡述我在這挑戰JS地下城1F-九九乘法中，使用陌生GRID以及HTML、CSS、JS將九九乘法表呈現出來去完成它．以下簡述GRID… 1F原始檔、1F DEMO">
@@ -405,8 +405,9 @@
 <li>grid-column-end</li>
 <li>grid-row-start</li>
 <li>grid-row-end</li>
-<li>grid-row</li>
-<li>grid-column<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.wrapper { </span><br><span class="line">    display: grid; </span><br><span class="line">    grid-template-columns: repeat(3, 1fr); </span><br><span class="line">    grid-auto-rows: 100px; </span><br><span class="line">} </span><br><span class="line">.box1 { </span><br><span class="line">    grid-column-start: 1; </span><br><span class="line">    grid-column-end: 4; </span><br><span class="line">    grid-row-start: 1; </span><br><span class="line">    grid-row-end: 3; </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<li>grid-row (start / end)</li>
+<li>grid-column (start / end)</li>
+<li>grid-area (row-start / column-start / row-end / column-end)<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.wrapper { </span><br><span class="line">    display: grid; </span><br><span class="line">    grid-template-columns: repeat(3, 1fr); </span><br><span class="line">    grid-auto-rows: 100px; </span><br><span class="line">} </span><br><span class="line">.box1 { </span><br><span class="line">    grid-column-start: 1; </span><br><span class="line">    grid-column-end: 4; </span><br><span class="line">    grid-row-start: 1; </span><br><span class="line">    grid-row-end: 3; </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 </li>
 </ul>
