@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning,">
+  <meta name="keywords" content="JavaScript,JS地下城,Ajax,CORS,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="! Content： Metacharacters Symbols Metacharacters Symbols ^  =&amp;gt; Caret means must start with$  =&amp;gt; Must ends with, could matched with a word^$ =&amp;gt; Must begin and end with. =&amp;gt; Matches any ONE character* =&amp;gt;">
-<meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
+<meta name="description" content="❓Ajax是什麼 (Asynchronous JavaScript and XML)MDN入門篇    1. 2005 年時由 Jesse James Garrett 所發明的術語，描述一種使用數個既有技術的「新」方法   2. 使用 XMLHttpRequest物件來與伺服器進行通訊   3. 可以傳送並接收多種格式的資訊，包括 JSON、XML、HTML、以及文字檔案   4. 由於非同步的本">
+<meta name="keywords" content="JavaScript,JS地下城,Ajax,CORS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RegExp - Metacharacter Symbols">
-<meta property="og:url" content="hsuifang.github.io/2019/09/14/RegExp1/index.html">
+<meta property="og:title" content="Ajax、CORS - 整理與小應用">
+<meta property="og:url" content="hsuifang.github.io/2020/02/11/整理與小應用/index.html">
 <meta property="og:site_name" content="Not Today !">
-<meta property="og:description" content="! Content： Metacharacters Symbols Metacharacters Symbols ^  =&amp;gt; Caret means must start with$  =&amp;gt; Must ends with, could matched with a word^$ =&amp;gt; Must begin and end with. =&amp;gt; Matches any ONE character* =&amp;gt;">
+<meta property="og:description" content="❓Ajax是什麼 (Asynchronous JavaScript and XML)MDN入門篇    1. 2005 年時由 Jesse James Garrett 所發明的術語，描述一種使用數個既有技術的「新」方法   2. 使用 XMLHttpRequest物件來與伺服器進行通訊   3. 可以傳送並接收多種格式的資訊，包括 JSON、XML、HTML、以及文字檔案   4. 由於非同步的本">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-09-26T12:56:34.966Z">
+<meta property="og:updated_time" content="2020-02-12T03:36:48.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RegExp - Metacharacter Symbols">
-<meta name="twitter:description" content="! Content： Metacharacters Symbols Metacharacters Symbols ^  =&amp;gt; Caret means must start with$  =&amp;gt; Must ends with, could matched with a word^$ =&amp;gt; Must begin and end with. =&amp;gt; Matches any ONE character* =&amp;gt;">
+<meta name="twitter:title" content="Ajax、CORS - 整理與小應用">
+<meta name="twitter:description" content="❓Ajax是什麼 (Asynchronous JavaScript and XML)MDN入門篇    1. 2005 年時由 Jesse James Garrett 所發明的術語，描述一種使用數個既有技術的「新」方法   2. 使用 XMLHttpRequest物件來與伺服器進行通訊   3. 可以傳送並接收多種格式的資訊，包括 JSON、XML、HTML、以及文字檔案   4. 由於非同步的本">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/09/14/RegExp1/">
+  <link rel="canonical" href="hsuifang.github.io/2020/02/11/整理與小應用/">
 
 
 
 
 
-  <title>RegExp - Metacharacter Symbols | Not Today !</title>
+  <title>Ajax、CORS - 整理與小應用 | Not Today !</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/09/14/RegExp1/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/02/11/整理與小應用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RegExp - Metacharacter Symbols</h1>
+          <h1 class="post-title" itemprop="name headline">Ajax、CORS - 整理與小應用</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-14T23:02:02+08:00">
-                2019-09-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-11T12:22:11+08:00">
+                2020-02-11
               </time>
             
 
@@ -341,14 +341,35 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p><code>! Content： Metacharacters Symbols</code></p>
-<h2 id="Metacharacters-Symbols"><a href="#Metacharacters-Symbols" class="headerlink" title="Metacharacters Symbols"></a>Metacharacters Symbols</h2><blockquote>
-<p><strong>^</strong>  => Caret means must start with<br><strong>$</strong>  => Must ends with, could matched with a word<br><strong>^$</strong> => Must begin and end with<br><strong>.</strong> => Matches any ONE character<br><strong>*</strong> =>  Matches any character 0 or more times<br><strong>?</strong> => Optionals Charater<br><strong>\</strong> => Escape character</p>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="❓Ajax是什麼-Asynchronous-JavaScript-and-XML"><a href="#❓Ajax是什麼-Asynchronous-JavaScript-and-XML" class="headerlink" title="❓Ajax是什麼 (Asynchronous JavaScript and XML)"></a>❓Ajax是什麼 (Asynchronous JavaScript and XML)</h2><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/Guide/AJAX/Getting_Started" target="_blank" rel="noopener">MDN入門篇</a></p>
+<blockquote>
+  1. 2005 年時由 Jesse James Garrett 所發明的術語，描述一種使用數個既有技術的「新」方法<br>
+  2. 使用 <u>XMLHttpRequest</u>物件來與伺服器進行通訊<br>
+  3. 可以傳送並接收多種格式的資訊，包括 JSON、XML、HTML、以及文字檔案<br>
+  4. 由於非同步的本質，代表可以與伺服溝通、交換資料、以及更新頁面，且“無須重整網頁”
 </blockquote>
 <a id="more"></a>
-<hr>
-<p>小試身手區區區</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">let re;</span><br><span class="line">// Literal Characters</span><br><span class="line">re = /hello/i</span><br><span class="line"></span><br><span class="line">// Metacharacters Symbols</span><br><span class="line">re = /^h/i; // 一定要以一個h字母開頭(in </span><br><span class="line">re = /d$/i; // 一定要以一個d字母結尾(in insensitive)</span><br><span class="line">re = /^hello$/i // 只有hello才符合, hello開頭, hello結尾</span><br><span class="line">re = /h.llo$/i // h 和llo組合，之間需有一個字</span><br><span class="line">re = /h*llo$/i // 只要是h 和llo組合，不論之間有多少文字(0或1以上)</span><br><span class="line">re = /gre?a?y/i // gray和grey都符合</span><br><span class="line">re = /gre?a?y\?/i // 加了escapse 符號，?就會被當作一般?, 而非options character</span><br><span class="line"></span><br><span class="line">// String to match</span><br><span class="line">const str = 'h1llo';</span><br><span class="line">const result = re.exec(str)</span><br><span class="line">console.log(result)</span><br><span class="line"></span><br><span class="line">// Log Results</span><br><span class="line">function reTest(re, str) {</span><br><span class="line">  if(re.test(str)) {</span><br><span class="line">    console.log(`${str} matches ${re.source}`)</span><br><span class="line">  } else {</span><br><span class="line">    console.log(`${str} does not matched ${re.source}`)</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">reTest(re, str)</span><br></pre></td></tr></tbody></table></figure></body></html>
+
+<h2 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h2><ul>
+<li>XMLHttpRequest API 是 Ajax 的核心</li>
+<li>透過 XMLHttpRequest 建立的請求，其取得資料的方式可以為非同步或同步兩種之一。</li>
+<li><strong>new XMLHttpRequest().open(方法, url, 是否非同步/預設非同步)</strong><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">(function() {</span><br><span class="line">  var httpRequest;</span><br><span class="line"></span><br><span class="line">  function makeRequest() {</span><br><span class="line">    httpRequest = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">    if (!httpRequest) {</span><br><span class="line">      alert('Giving up :( Cannot create an XMLHTTP instance');</span><br><span class="line">      return false;</span><br><span class="line">    }</span><br><span class="line">    // 決定伺服器傳回資料後的處理方式</span><br><span class="line">    httpRequest.onreadystatechange = alertContents;</span><br><span class="line"></span><br><span class="line">    // 決定處理方式之後你得確實發出 request，此時需叫用 HTTP request 類別的 open() 及 send() 方法</span><br><span class="line">    httpRequest.open('GET', 'test.html');</span><br><span class="line">    httpRequest.send();</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  function alertContents() {</span><br><span class="line">    if (httpRequest.readyState === XMLHttpRequest.DONE) {</span><br><span class="line">      if (httpRequest.status === 200) {</span><br><span class="line">        alert(httpRequest.responseText);</span><br><span class="line">      } else {</span><br><span class="line">        alert('There was a problem with the request.');</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">})();</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ul>
+<h2 id="Fetch-API"><a href="#Fetch-API" class="headerlink" title="Fetch API"></a>Fetch API</h2><ul>
+<li>並非所有瀏覽器切支援，如舊ie, 故需要用polyfill去轉換</li>
+<li>fetch 會使用 ES6 的 Promise 作回應</li>
+<li>回傳的為 ReadableStream 物件，需要使用不同資料類型使用對應方法，才能正確取得資料物件<br><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API" target="_blank" rel="noopener">MDN</a><br>[OXXO]](<a href="https://www.oxxostudio.tw/articles/201908/js-fetch.html" target="_blank" rel="noopener">https://www.oxxostudio.tw/articles/201908/js-fetch.html</a>)</li>
+</ul>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, {})</span><br><span class="line">.then(function(response) {</span><br><span class="line">    // 處理 response</span><br><span class="line">}).catch(function(err) {</span><br><span class="line">    // 錯誤處理</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h2><p>基於安全性考量，程式碼所發出的“跨來源 HTTP“ 請求會受到限制。例如，XMLHttpRequest 及 Fetch 都遵守同源政策（same-origin policy）。<br>這代表網路應用程式所使用的 API 除非使用 CORS 標頭，否則只能請求與應用程式相同網域的 HTTP 資源。</p>
+<h3 id="CORS解決辦法"><a href="#CORS解決辦法" class="headerlink" title="CORS解決辦法"></a>CORS解決辦法</h3><p>從Sever端下手, 可以串現成，如:<a href="https://cors-anywhere.herokuapp.com/" target="_blank" rel="noopener">heroku cors</a>、自己做<br>因為之前有碰過Google App Script的小經驗，所以這次也使用這方法．<br>👉<a href="https://medium.com/@zehung860486/hero-of-underground-%E5%9C%B0%E4%B8%8B%E5%9F%8E-5f-aqi-%E5%85%A8%E5%8F%B0%E7%A9%BA%E6%B0%A3%E6%8C%87%E6%A8%99%E5%84%80%E8%A1%A8%E6%9D%BF-c060fbe58454" target="_blank" rel="noopener">可參考達人做法</a></p>
+<h2 id="心得👉"><a href="#心得👉" class="headerlink" title="心得👉"></a>心得👉</h2><p>其實這次串接很幸運，看完環保署的網站提取<a href="https://opendata.epa.gov.tw/api/v1/AQI?%24skip=0&%24top=1000&%24format=json" target="_blank" rel="noopener">URL</a>後，竟然沒發生CORS.<br>但…這樣不就沒練習到了嗎？？ 所以我只好去找別的同學的URL(app.js裡的cors_aqi), 然後再重走一遍</p>
+<p>因為這個應用，也爬了很多文章和看別人的做法😀</p>
+<p><a href="https://github.com/hsuifang/AQI" target="_blank" rel="noopener">AQI Code</a><br><a href="https://hsuifang.github.io/AQI/">View</a></p>
+</body></html>
       
     </div>
     
@@ -367,9 +388,11 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
+            <a href="/tags/JS地下城/" rel="tag"># JS地下城</a>
           
-            <a href="/tags/Modern-JavaScript-From-The-Beginning/" rel="tag"># Modern JavaScript From The Beginning</a>
+            <a href="/tags/Ajax/" rel="tag"># Ajax</a>
+          
+            <a href="/tags/CORS/" rel="tag"># CORS</a>
           
         </div>
       
@@ -382,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/11/RegExp/" rel="next" title="RegExp - Evaluation Functions">
-                <i class="fa fa-chevron-left"></i> RegExp - Evaluation Functions
+              <a href="/2020/02/01/聖誕節活動/" rel="next" title="聖誕節活動">
+                <i class="fa fa-chevron-left"></i> 聖誕節活動
               </a>
             
           </div>
@@ -391,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/26/RegExp2/" rel="prev" title="Character Sets & Quantifiers">
-                Character Sets & Quantifiers <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -538,7 +557,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Metacharacters-Symbols"><span class="nav-number">1.</span> <span class="nav-text">Metacharacters Symbols</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#❓Ajax是什麼-Asynchronous-JavaScript-and-XML"><span class="nav-number">1.</span> <span class="nav-text">❓Ajax是什麼 (Asynchronous JavaScript and XML)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLHttpRequest"><span class="nav-number">2.</span> <span class="nav-text">XMLHttpRequest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fetch-API"><span class="nav-number">3.</span> <span class="nav-text">Fetch API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CORS"><span class="nav-number">4.</span> <span class="nav-text">CORS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CORS解決辦法"><span class="nav-number">4.1.</span> <span class="nav-text">CORS解決辦法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#心得👉"><span class="nav-number">5.</span> <span class="nav-text">心得👉</span></a></li></ol></div>
             
 
           </div>
