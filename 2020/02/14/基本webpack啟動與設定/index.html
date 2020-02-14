@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning,">
+  <meta name="keywords" content="webpack,超越入門！Webpack 前端自動化開發,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
-<meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
+<meta name="description" content="webpack自動化開發工具有很多新的加速開發前端技術，例如vue、stylus、sass… ,但這些技術在沒有用特定工具轉換、編譯前，瀏覽器是看不懂的，而這個工具就是 Webpackwebpack將這些語言轉換成瀏覽器看得懂的HTML、CSS、JavaScript甚至可以用webpack來壓縮圖片下列條列基本webpack啟動與設定…">
+<meta name="keywords" content="webpack,超越入門！Webpack 前端自動化開發">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Character Sets &amp; Quantifiers">
-<meta property="og:url" content="hsuifang.github.io/2019/09/26/RegExp2/index.html">
+<meta property="og:title" content="基本webpack啟動與設定">
+<meta property="og:url" content="hsuifang.github.io/2020/02/14/基本webpack啟動與設定/index.html">
 <meta property="og:site_name" content="Not Today !">
-<meta property="og:description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
+<meta property="og:description" content="webpack自動化開發工具有很多新的加速開發前端技術，例如vue、stylus、sass… ,但這些技術在沒有用特定工具轉換、編譯前，瀏覽器是看不懂的，而這個工具就是 Webpackwebpack將這些語言轉換成瀏覽器看得懂的HTML、CSS、JavaScript甚至可以用webpack來壓縮圖片下列條列基本webpack啟動與設定…">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-09-26T12:59:15.038Z">
+<meta property="og:updated_time" content="2020-02-14T08:15:23.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Character Sets &amp; Quantifiers">
-<meta name="twitter:description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
+<meta name="twitter:title" content="基本webpack啟動與設定">
+<meta name="twitter:description" content="webpack自動化開發工具有很多新的加速開發前端技術，例如vue、stylus、sass… ,但這些技術在沒有用特定工具轉換、編譯前，瀏覽器是看不懂的，而這個工具就是 Webpackwebpack將這些語言轉換成瀏覽器看得懂的HTML、CSS、JavaScript甚至可以用webpack來壓縮圖片下列條列基本webpack啟動與設定…">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/09/26/RegExp2/">
+  <link rel="canonical" href="hsuifang.github.io/2020/02/14/基本webpack啟動與設定/">
 
 
 
 
 
-  <title>Character Sets & Quantifiers | Not Today !</title>
+  <title>基本webpack啟動與設定 | Not Today !</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/09/26/RegExp2/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/02/14/基本webpack啟動與設定/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Character Sets & Quantifiers</h1>
+          <h1 class="post-title" itemprop="name headline">基本webpack啟動與設定</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-26T20:31:42+08:00">
-                2019-09-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-14T16:00:08+08:00">
+                2020-02-14
               </time>
             
 
@@ -341,20 +341,40 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p><code>! Content：Brackets []、Braces {}、Peratheses ()</code></p>
-<h2 id="Brackets-Character-Sets"><a href="#Brackets-Character-Sets" class="headerlink" title="Brackets [] - Character Sets"></a>Brackets [] - Character Sets</h2><blockquote>
-<p>With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets <strong>[]</strong>. <a href="https://www.regular-expressions.info/charclass.html" target="_blank" rel="noopener"><code>參考來源</code></a></p>
-</blockquote>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p>webpack自動化開發工具<br>有很多新的加速開發前端技術，例如vue、stylus、sass… ,<br>但這些技術在沒有用特定工具轉換、編譯前，瀏覽器是看不懂的，<br>而這個工具就是 Webpack<br>webpack將這些語言轉換成瀏覽器看得懂的HTML、CSS、JavaScript<br>甚至可以用webpack來壓縮圖片<br>下列條列基本webpack啟動與設定…</p>
 <a id="more"></a>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">re = /gr[ae]y/i  => Must be an a or e</span><br><span class="line">re = /[GF]ray/ => Must be a G or F</span><br><span class="line">re = /[^GF]ray/ => !! Match anything except a G or F</span><br><span class="line">re = /[A-Z]ray/ => Match any Uppercase letter</span><br><span class="line">re = /[a-z]ray/ => Match any Lowercase letter</span><br><span class="line">re = /[A-Za-z]ray/ => Match any letter</span><br><span class="line">re = /[0-9]ray/ => Match any digit; ！！10ray符合</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Curly-Braces-Quantifiers"><a href="#Curly-Braces-Quantifiers" class="headerlink" title="Curly Braces {} - Quantifiers"></a>Curly Braces {} - Quantifiers</h2><blockquote>
-<p>curly braces are used by a quantifier with specific limits</p>
+<p>Step1: </p>
+<blockquote>
+<p>npm init</p>
 </blockquote>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// the following are three different limits of [ l ]</span><br><span class="line"></span><br><span class="line">re = /Hel{2}o/i => Must occur exactly {m} amount of times</span><br><span class="line">re = /Hel{2,4}o/i // Must occur {m} amount of times based on numbers</span><br><span class="line">re = /Hel{2,}o/i // Must occur at least {m} times</span><br></pre></td></tr></tbody></table></figure>
+<p>Step2: </p>
+<blockquote>
+<p>npm install webpack webpack-cli –save -dev</p>
+</blockquote>
+<p>Step3:</p>
+<blockquote>
+<p>新增一個webpack.config.js</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.exports = {</span><br><span class="line">    entry: './index.js', // 進入點</span><br><span class="line">    output: {</span><br><span class="line">     filename: 'index-bundle.js'</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Peratheses-Grouping"><a href="#Peratheses-Grouping" class="headerlink" title="Peratheses () - Grouping"></a>Peratheses () - Grouping</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re = /([0-9]X){3}/ => 3 times</span><br><span class="line">re = /^([0-9]X){3}$/</span><br></pre></td></tr></tbody></table></figure>
+<p>用webpack開發網站的時候，所有東西都要用模組化來製作<br>包括 webpack 裡的config也要模組化</p>
+<p>module.exports  =>>> 我要將模組丟出去拉</p>
+<p>Step4:</p>
+<blockquote>
+<p>於package.json加入以下片段</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": {</span><br><span class="line">    “start”: “webpack"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
+<p>Step5:</p>
+<blockquote>
+<p>於終端機啟動 npm run start</p>
+<ol>
+<li>新版的的webpack, 一定要透過npm scripts去執行webpack, 而非直接打webpack</li>
+<li>執行webpack, 也做了轉換跟打包</li>
+<li>沒有特別設定，會將檔案放置預設的dist資料夾</li>
+</ol>
+</blockquote>
 </body></html>
       
     </div>
@@ -372,11 +392,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
-            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
-          
-            <a href="/tags/Modern-JavaScript-From-The-Beginning/" rel="tag"># Modern JavaScript From The Beginning</a>
+            <a href="/tags/超越入門！Webpack-前端自動化開發/" rel="tag"># 超越入門！Webpack 前端自動化開發</a>
           
         </div>
       
@@ -389,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/14/RegExp1/" rel="next" title="RegExp - Metacharacter Symbols">
-                <i class="fa fa-chevron-left"></i> RegExp - Metacharacter Symbols
+              <a href="/2020/02/11/整理與小應用/" rel="next" title="Ajax、CORS - 整理與小應用">
+                <i class="fa fa-chevron-left"></i> Ajax、CORS - 整理與小應用
               </a>
             
           </div>
@@ -399,8 +417,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/10/this/" rel="prev" title="this">
-                this <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/14/Path檔案路徑設定/" rel="prev" title="Path檔案路徑設定">
+                Path檔案路徑設定 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -453,17 +471,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -535,22 +544,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brackets-Character-Sets"><span class="nav-number">1.</span> <span class="nav-text">Brackets [] - Character Sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Curly-Braces-Quantifiers"><span class="nav-number">2.</span> <span class="nav-text">Curly Braces {} - Quantifiers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peratheses-Grouping"><span class="nav-number">3.</span> <span class="nav-text">Peratheses () - Grouping</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

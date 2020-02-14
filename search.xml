@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Path檔案路徑設定]]></title>
+    <url>%2F2020%2F02%2F14%2FPath%E6%AA%94%E6%A1%88%E8%B7%AF%E5%BE%91%E8%A8%AD%E5%AE%9A%2F</url>
+    <content type="text"><![CDATA[開發時，往往都有一個src的資料夾，裡面放的都是未經編譯的開發檔案且通常不會將預處理檔案與webpack放在同一個階層 使用webpack編譯時，將打包後的資料放進預設dist裡又今日檔案階層不同、資料夾來源不同等等… 就要進行路徑調整 重點：以下兩個分別是node.js的方法與環境變數path.resolve() path是node.js用來處理跟“路徑”有關的方法，方會用到的API resolve是用來將相對路徑或路徑片段解析成絕對路徑 webpack官方推推的方法 __dirname 前方有兩個底線，其為node.js的全域環境變數 指的是當前執行文件所在目錄位置 實作調整路徑 Step1: 用require 的語法將node.js 環境裡面的path方法拿進webpack裡面使用 1var path = require("path"); Step2: 用context來指定entry的資料夾 12345678module.exports = { context: path.resolve(__dirname, "./src”), // path.resolve(當前目錄位置, 指派的相對路徑) => 系統絕對路徑 entry: './index.js', // 進入點 output: { path: path.resolve(__dirname, "./dist"), filename: 'index-bundle.js' }} Step3: 將編譯後的檔案放置指定資料夾 12345678module.exports = { context: path.resolve(__dirname, "./src”), // path.resolve(當前目錄位置, 指派的相對路徑) => 系統絕對路徑 entry: './index.js', // 進入點 output: { path: path.resolve(__dirname, "./dist"), filename: 'index-bundle.js' }}]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+        <tag>path</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[基本webpack啟動與設定]]></title>
+    <url>%2F2020%2F02%2F14%2F%E5%9F%BA%E6%9C%ACwebpack%E5%95%9F%E5%8B%95%E8%88%87%E8%A8%AD%E5%AE%9A%2F</url>
+    <content type="text"><![CDATA[webpack自動化開發工具有很多新的加速開發前端技術，例如vue、stylus、sass… ,但這些技術在沒有用特定工具轉換、編譯前，瀏覽器是看不懂的，而這個工具就是 Webpackwebpack將這些語言轉換成瀏覽器看得懂的HTML、CSS、JavaScript甚至可以用webpack來壓縮圖片下列條列基本webpack啟動與設定… Step1: npm init Step2: npm install webpack webpack-cli –save -dev Step3: 新增一個webpack.config.js 123456module.exports = { entry: './index.js', // 進入點 output: { filename: 'index-bundle.js' }} 用webpack開發網站的時候，所有東西都要用模組化來製作包括 webpack 裡的config也要模組化 module.exports =>>> 我要將模組丟出去拉 Step4: 於package.json加入以下片段 123"scripts": { “start”: “webpack"} Step5: 於終端機啟動 npm run start 新版的的webpack, 一定要透過npm scripts去執行webpack, 而非直接打webpack 執行webpack, 也做了轉換跟打包 沒有特別設定，會將檔案放置預設的dist資料夾]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ajax、CORS - 整理與小應用]]></title>
     <url>%2F2020%2F02%2F11%2F%E6%95%B4%E7%90%86%E8%88%87%E5%B0%8F%E6%87%89%E7%94%A8%2F</url>
     <content type="text"><![CDATA[❓Ajax是什麼 (Asynchronous JavaScript and XML)MDN入門篇 1. 2005 年時由 Jesse James Garrett 所發明的術語，描述一種使用數個既有技術的「新」方法 2. 使用 XMLHttpRequest物件來與伺服器進行通訊 3. 可以傳送並接收多種格式的資訊，包括 JSON、XML、HTML、以及文字檔案 4. 由於非同步的本質，代表可以與伺服溝通、交換資料、以及更新頁面，且“無須重整網頁” XMLHttpRequest XMLHttpRequest API 是 Ajax 的核心 透過 XMLHttpRequest 建立的請求，其取得資料的方式可以為非同步或同步兩種之一。 new XMLHttpRequest().open(方法, url, 是否非同步/預設非同步)12345678910111213141516171819202122232425262728(function() { var httpRequest; function makeRequest() { httpRequest = new XMLHttpRequest(); if (!httpRequest) { alert('Giving up :( Cannot create an XMLHTTP instance'); return false; } // 決定伺服器傳回資料後的處理方式 httpRequest.onreadystatechange = alertContents; // 決定處理方式之後你得確實發出 request，此時需叫用 HTTP request 類別的 open() 及 send() 方法 httpRequest.open('GET', 'test.html'); httpRequest.send(); } function alertContents() { if (httpRequest.readyState === XMLHttpRequest.DONE) { if (httpRequest.status === 200) { alert(httpRequest.responseText); } else { alert('There was a problem with the request.'); } } }})(); Fetch API 並非所有瀏覽器切支援，如舊ie, 故需要用polyfill去轉換 fetch 會使用 ES6 的 Promise 作回應 回傳的為 ReadableStream 物件，需要使用不同資料類型使用對應方法，才能正確取得資料物件MDN[OXXO]](https://www.oxxostudio.tw/articles/201908/js-fetch.html) 123456fetch(url, {}).then(function(response) { // 處理 response}).catch(function(err) { // 錯誤處理}); CORS基於安全性考量，程式碼所發出的“跨來源 HTTP“ 請求會受到限制。例如，XMLHttpRequest 及 Fetch 都遵守同源政策（same-origin policy）。這代表網路應用程式所使用的 API 除非使用 CORS 標頭，否則只能請求與應用程式相同網域的 HTTP 資源。 CORS解決辦法從Sever端下手, 可以串現成，如:heroku cors、自己做因為之前有碰過Google App Script的小經驗，所以這次也使用這方法．👉可參考達人做法 心得👉其實這次串接很幸運，看完環保署的網站提取URL後，竟然沒發生CORS.但…這樣不就沒練習到了嗎？？ 所以我只好去找別的同學的URL(app.js裡的cors_aqi), 然後再重走一遍 因為這個應用，也爬了很多文章和看別人的做法😀 AQI CodeView]]></content>

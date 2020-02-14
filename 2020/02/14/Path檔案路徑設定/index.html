@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning,">
+  <meta name="keywords" content="webpack,path,超越入門！Webpack 前端自動化開發,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
-<meta name="keywords" content="JavaScript,RegExp,Modern JavaScript From The Beginning">
+<meta name="description" content="開發時，往往都有一個src的資料夾，裡面放的都是未經編譯的開發檔案且通常不會將預處理檔案與webpack放在同一個階層 使用webpack編譯時，將打包後的資料放進預設dist裡又今日檔案階層不同、資料夾來源不同等等… 就要進行路徑調整">
+<meta name="keywords" content="webpack,path,超越入門！Webpack 前端自動化開發">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Character Sets &amp; Quantifiers">
-<meta property="og:url" content="hsuifang.github.io/2019/09/26/RegExp2/index.html">
+<meta property="og:title" content="Path檔案路徑設定">
+<meta property="og:url" content="hsuifang.github.io/2020/02/14/Path檔案路徑設定/index.html">
 <meta property="og:site_name" content="Not Today !">
-<meta property="og:description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
+<meta property="og:description" content="開發時，往往都有一個src的資料夾，裡面放的都是未經編譯的開發檔案且通常不會將預處理檔案與webpack放在同一個階層 使用webpack編譯時，將打包後的資料放進預設dist裡又今日檔案階層不同、資料夾來源不同等等… 就要進行路徑調整">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-09-26T12:59:15.038Z">
+<meta property="og:updated_time" content="2020-02-14T08:15:18.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Character Sets &amp; Quantifiers">
-<meta name="twitter:description" content="! Content：Brackets []、Braces {}、Peratheses () Brackets [] - Character Sets With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several charact">
+<meta name="twitter:title" content="Path檔案路徑設定">
+<meta name="twitter:description" content="開發時，往往都有一個src的資料夾，裡面放的都是未經編譯的開發檔案且通常不會將預處理檔案與webpack放在同一個階層 使用webpack編譯時，將打包後的資料放進預設dist裡又今日檔案階層不同、資料夾來源不同等等… 就要進行路徑調整">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/09/26/RegExp2/">
+  <link rel="canonical" href="hsuifang.github.io/2020/02/14/Path檔案路徑設定/">
 
 
 
 
 
-  <title>Character Sets & Quantifiers | Not Today !</title>
+  <title>Path檔案路徑設定 | Not Today !</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/09/26/RegExp2/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/02/14/Path檔案路徑設定/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Character Sets & Quantifiers</h1>
+          <h1 class="post-title" itemprop="name headline">Path檔案路徑設定</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-26T20:31:42+08:00">
-                2019-09-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-14T16:05:18+08:00">
+                2020-02-14
               </time>
             
 
@@ -341,21 +341,34 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p><code>! Content：Brackets []、Braces {}、Peratheses ()</code></p>
-<h2 id="Brackets-Character-Sets"><a href="#Brackets-Character-Sets" class="headerlink" title="Brackets [] - Character Sets"></a>Brackets [] - Character Sets</h2><blockquote>
-<p>With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets <strong>[]</strong>. <a href="https://www.regular-expressions.info/charclass.html" target="_blank" rel="noopener"><code>參考來源</code></a></p>
-</blockquote>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p>開發時，往往都有一個src的資料夾，裡面放的都是未經編譯的開發檔案<br>且通常不會將預處理檔案與webpack放在同一個階層</p>
+<p>使用webpack編譯時，將打包後的資料放進預設dist裡<br>又今日檔案階層不同、資料夾來源不同等等… 就要進行路徑調整</p>
 <a id="more"></a>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">re = /gr[ae]y/i  => Must be an a or e</span><br><span class="line">re = /[GF]ray/ => Must be a G or F</span><br><span class="line">re = /[^GF]ray/ => !! Match anything except a G or F</span><br><span class="line">re = /[A-Z]ray/ => Match any Uppercase letter</span><br><span class="line">re = /[a-z]ray/ => Match any Lowercase letter</span><br><span class="line">re = /[A-Za-z]ray/ => Match any letter</span><br><span class="line">re = /[0-9]ray/ => Match any digit; ！！10ray符合</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Curly-Braces-Quantifiers"><a href="#Curly-Braces-Quantifiers" class="headerlink" title="Curly Braces {} - Quantifiers"></a>Curly Braces {} - Quantifiers</h2><blockquote>
-<p>curly braces are used by a quantifier with specific limits</p>
+
+<h2 id="重點：以下兩個分別是node-js的方法與環境變數"><a href="#重點：以下兩個分別是node-js的方法與環境變數" class="headerlink" title="重點：以下兩個分別是node.js的方法與環境變數"></a>重點：以下兩個分別是node.js的方法與環境變數</h2><h3 id="path-resolve"><a href="#path-resolve" class="headerlink" title="path.resolve()"></a><strong>path.resolve()</strong></h3><ol>
+<li>path是node.js用來處理跟“路徑”有關的方法，方會用到的API</li>
+<li>resolve是用來將相對路徑或路徑片段解析成絕對路徑</li>
+<li>webpack官方推推的方法</li>
+</ol>
+<h3 id="dirname"><a href="#dirname" class="headerlink" title="__dirname "></a><strong>__dirname </strong></h3><ol>
+<li>前方有兩個底線，其為node.js的全域環境變數</li>
+<li>指的是當前執行文件所在目錄位置</li>
+</ol>
+<h2 id="實作調整路徑"><a href="#實作調整路徑" class="headerlink" title="實作調整路徑"></a>實作調整路徑</h2><blockquote>
+<p>Step1: 用require 的語法將node.js 環境裡面的path方法拿進webpack裡面使用 </p>
 </blockquote>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// the following are three different limits of [ l ]</span><br><span class="line"></span><br><span class="line">re = /Hel{2}o/i => Must occur exactly {m} amount of times</span><br><span class="line">re = /Hel{2,4}o/i // Must occur {m} amount of times based on numbers</span><br><span class="line">re = /Hel{2,}o/i // Must occur at least {m} times</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var path = require("path");</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Peratheses-Grouping"><a href="#Peratheses-Grouping" class="headerlink" title="Peratheses () - Grouping"></a>Peratheses () - Grouping</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re = /([0-9]X){3}/ => 3 times</span><br><span class="line">re = /^([0-9]X){3}$/</span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>Step2: 用context來指定entry的資料夾</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">module.exports = {</span><br><span class="line">  <strong>context</strong>: path.resolve(__dirname, "./src”),  // path.resolve(當前目錄位置, 指派的相對路徑) => 系統絕對路徑</span><br><span class="line">  entry: './index.js', // 進入點</span><br><span class="line">  output: {</span><br><span class="line">      path: path.resolve(__dirname, "./dist"),</span><br><span class="line">      filename: 'index-bundle.js'</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-</body></html>
+<blockquote>
+<p>Step3: 將編譯後的檔案放置指定資料夾</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">module.exports = {</span><br><span class="line">  context: path.resolve(__dirname, "./src”),  // path.resolve(當前目錄位置, 指派的相對路徑) => 系統絕對路徑</span><br><span class="line">  entry: './index.js', // 進入點</span><br><span class="line">  <strong>output</strong>: {</span><br><span class="line">      path: path.resolve(__dirname, "./dist"),</span><br><span class="line">      filename: 'index-bundle.js'</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>
       
     </div>
     
@@ -372,11 +385,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
-            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
+            <a href="/tags/path/" rel="tag"># path</a>
           
-            <a href="/tags/Modern-JavaScript-From-The-Beginning/" rel="tag"># Modern JavaScript From The Beginning</a>
+            <a href="/tags/超越入門！Webpack-前端自動化開發/" rel="tag"># 超越入門！Webpack 前端自動化開發</a>
           
         </div>
       
@@ -389,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/14/RegExp1/" rel="next" title="RegExp - Metacharacter Symbols">
-                <i class="fa fa-chevron-left"></i> RegExp - Metacharacter Symbols
+              <a href="/2020/02/14/基本webpack啟動與設定/" rel="next" title="基本webpack啟動與設定">
+                <i class="fa fa-chevron-left"></i> 基本webpack啟動與設定
               </a>
             
           </div>
@@ -398,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/10/this/" rel="prev" title="this">
-                this <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brackets-Character-Sets"><span class="nav-number">1.</span> <span class="nav-text">Brackets [] - Character Sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Curly-Braces-Quantifiers"><span class="nav-number">2.</span> <span class="nav-text">Curly Braces {} - Quantifiers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peratheses-Grouping"><span class="nav-number">3.</span> <span class="nav-text">Peratheses () - Grouping</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重點：以下兩個分別是node-js的方法與環境變數"><span class="nav-number">1.</span> <span class="nav-text">重點：以下兩個分別是node.js的方法與環境變數</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#path-resolve"><span class="nav-number">1.1.</span> <span class="nav-text">path.resolve()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirname"><span class="nav-number">1.2.</span> <span class="nav-text">__dirname </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#實作調整路徑"><span class="nav-number">2.</span> <span class="nav-text">實作調整路徑</span></a></li></ol></div>
             
 
           </div>
