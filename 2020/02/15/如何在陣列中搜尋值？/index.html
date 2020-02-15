@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JS地下城,toLocaleString,Date,">
+  <meta name="keywords" content="JavaScript,Search data,Array's methods,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Date.prototype.toLocaleString()MDN、w3schools對比上一關也有運用到此方法，這次因為各區域時間表示方法有差異，ex: 我在台灣，但我要顯示英文，所以我參考了文件，運用locales和options，再搭配Time Zone達成我的顯示目標 ···4F原始碼、4F畫面">
-<meta name="keywords" content="JS地下城,toLocaleString,Date">
+<meta name="description" content="在JavaScript中，有諸多的方法用以找尋特定的值、位置，以下整理在陣列中搜尋時，可能會用到的方法其中所列的方法為：includes、find、findIndex、indexOf及filter">
+<meta name="keywords" content="JavaScript,Search data,Array&#39;s methods">
 <meta property="og:type" content="article">
-<meta property="og:title" content="世界時鐘 - Date">
-<meta property="og:url" content="hsuifang.github.io/2020/01/07/地下城4F-世界時鐘/index.html">
+<meta property="og:title" content="如何在陣列中搜尋值？">
+<meta property="og:url" content="hsuifang.github.io/2020/02/15/如何在陣列中搜尋值？/index.html">
 <meta property="og:site_name" content="Not Today !">
-<meta property="og:description" content="Date.prototype.toLocaleString()MDN、w3schools對比上一關也有運用到此方法，這次因為各區域時間表示方法有差異，ex: 我在台灣，但我要顯示英文，所以我參考了文件，運用locales和options，再搭配Time Zone達成我的顯示目標 ···4F原始碼、4F畫面">
+<meta property="og:description" content="在JavaScript中，有諸多的方法用以找尋特定的值、位置，以下整理在陣列中搜尋時，可能會用到的方法其中所列的方法為：includes、find、findIndex、indexOf及filter">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2020-02-01T04:02:23.908Z">
+<meta property="og:updated_time" content="2020-02-15T08:56:03.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="世界時鐘 - Date">
-<meta name="twitter:description" content="Date.prototype.toLocaleString()MDN、w3schools對比上一關也有運用到此方法，這次因為各區域時間表示方法有差異，ex: 我在台灣，但我要顯示英文，所以我參考了文件，運用locales和options，再搭配Time Zone達成我的顯示目標 ···4F原始碼、4F畫面">
+<meta name="twitter:title" content="如何在陣列中搜尋值？">
+<meta name="twitter:description" content="在JavaScript中，有諸多的方法用以找尋特定的值、位置，以下整理在陣列中搜尋時，可能會用到的方法其中所列的方法為：includes、find、findIndex、indexOf及filter">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2020/01/07/地下城4F-世界時鐘/">
+  <link rel="canonical" href="hsuifang.github.io/2020/02/15/如何在陣列中搜尋值？/">
 
 
 
 
 
-  <title>世界時鐘 - Date | Not Today !</title>
+  <title>如何在陣列中搜尋值？ | Not Today !</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/01/07/地下城4F-世界時鐘/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/02/15/如何在陣列中搜尋值？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">世界時鐘 - Date</h1>
+          <h1 class="post-title" itemprop="name headline">如何在陣列中搜尋值？</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-07T18:14:30+08:00">
-                2020-01-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-15T16:32:26+08:00">
+                2020-02-15
               </time>
             
 
@@ -341,19 +341,52 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="Date-prototype-toLocaleString"><a href="#Date-prototype-toLocaleString" class="headerlink" title="Date.prototype.toLocaleString()"></a>Date.prototype.toLocaleString()</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString" target="_blank" rel="noopener">MDN</a>、<a href="https://www.w3schools.com/jsref/jsref_tolocalestring.asp" target="_blank" rel="noopener">w3schools</a><br>對比上一關也有運用到此方法，這次因為各區域時間表示方法有差異，ex: 我在台灣，但我要顯示英文，所以我參考了文件，運用<strong>locales</strong>和<strong>options</strong>，再搭配<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">Time Zone</a>達成我的顯示目標</p>
-<p>···<br><a href="https://github.com/hsuifang/worldClock/" target="_blank" rel="noopener">4F原始碼</a>、<a href="https://hsuifang.github.io/worldClock/">4F畫面</a></p>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p>在JavaScript中，有諸多的方法用以找尋特定的值、位置，<br>以下整理在陣列中搜尋時，可能會用到的方法<br>其中所列的方法為：includes、find、findIndex、indexOf及filter</p>
 <a id="more"></a>
-<h2 id="Date"><a href="#Date" class="headerlink" title="Date()"></a>Date()</h2><blockquote>
-<p>Date 物件是基於世界標準時間（UTC） 1970/1/1開始的毫秒數值來儲存時間。<br>Date 物件只能由以 Date 作為建構子來產生</p>
+
+<h3 id="includes"><a href="#includes" class="headerlink" title="includes"></a>includes</h3><blockquote>
+<p>判斷陣列是否包含特定的元素，並以此來回傳 Boolean (true /false)<br>arr.includes(searchElement[, fromIndex])</p>
 </blockquote>
-<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">MDN</a></p>
-<hr>
-<h2 id="什麼是GMT？"><a href="#什麼是GMT？" class="headerlink" title="什麼是GMT？"></a>什麼是GMT？</h2><p>Greenwich Mean Time(GMT / 格林威治時間)<br>格林威治標準時間的正午是指當平太陽橫穿格林威治子午線時（也就是在格林威治上空最高點時）的時間。</p>
-<h2 id="什麼是UTC"><a href="#什麼是UTC" class="headerlink" title="什麼是UTC?"></a>什麼是UTC?</h2><p>Coordinated Universal Time (UTC/ 世界協調時間).<br>為了解決GMT時間流逝不均勻的問題，使用原子鐘來定義時間。</p>
-<h3 id="The-difference-between-GMT-and-UTC"><a href="#The-difference-between-GMT-and-UTC" class="headerlink" title="The difference between GMT and UTC"></a>The difference between GMT and UTC</h3><p>GMT is am actual time zone, whereas UTC is a time standard that is used to keep time sync across the world</p>
-<h2 id="TimeStamp"><a href="#TimeStamp" class="headerlink" title="TimeStamp"></a>TimeStamp</h2><p>時間戳記或稱為時間標記（英語：Timestamp）是指字符串或編碼訊息用於辨識記錄下來的時間日期。國際標準為ISO 8601。</p>
-</body></html>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3];</span><br><span class="line">console.log(arr.includes(2, [fromIndex])) // true</span><br><span class="line">console.log(arr.includes('2', [fromIndex])) // false</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><blockquote>
+<p>回傳第一個滿足所提供之測試函式的元素”值”，否則回傳 undefined</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const arr = [5, 12, 8, 130, 44];</span><br><span class="line"></span><br><span class="line">const found = arr.find(element => element == 10);</span><br><span class="line"></span><br><span class="line">console.log(found);</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="findIndex"><a href="#findIndex" class="headerlink" title="findIndex"></a>findIndex</h3><blockquote>
+<p>回傳第一個滿足所提供之函式的”索引”，否則回傳 -1</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const arr = [5, 12, 8, 130, 44];</span><br><span class="line"></span><br><span class="line">const found = arr.findIndex(element => element == 10);</span><br><span class="line"></span><br><span class="line">console.log(found);</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h3><blockquote>
+<p>回傳陣列中第一個被找到之”索引”，否則回傳 -1<br>arr.indexOf(searchElement[, fromIndex])</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];</span><br><span class="line"></span><br><span class="line">console.log(beasts.indexOf('bison'));</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><blockquote>
+<p>會建立一個經指定之函式運算後，由「原陣列」中通過該函式檢驗之元素所構成的「新陣列」</p>
+</blockquote>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const words = ["spray", "limit", "elite", "exuberant", "destruction", "present", "happy"];</span><br><span class="line"></span><br><span class="line">let longWords = words.filter(word => word.length > 6);</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><table>
+  <tbody><tr>
+    <td>用途</td>
+    <td>陣列方法</td>
+  </tr>
+  <tr>
+    <td>確認是否存在？</td>
+    <td>includes</td>
+  </tr>
+  <tr>
+    <td>需要取得值</td>
+    <td>find、filter</td>
+  </tr>
+  <tr>
+    <td>需要取得索引值</td>
+    <td>findIndex、indexof</td>
+  </tr>
+</tbody></table> </body></html>
       
     </div>
     
@@ -370,11 +403,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JS地下城/" rel="tag"># JS地下城</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/toLocaleString/" rel="tag"># toLocaleString</a>
+            <a href="/tags/Search-data/" rel="tag"># Search data</a>
           
-            <a href="/tags/Date/" rel="tag"># Date</a>
+            <a href="/tags/Array-s-methods/" rel="tag"># Array's methods</a>
           
         </div>
       
@@ -387,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/06/地下城3F-計算機/" rel="next" title="toLocaleString / slice / substring">
-                <i class="fa fa-chevron-left"></i> toLocaleString / slice / substring
+              <a href="/2020/02/14/Path檔案路徑設定/" rel="next" title="Path檔案路徑設定">
+                <i class="fa fa-chevron-left"></i> Path檔案路徑設定
               </a>
             
           </div>
@@ -396,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/01/聖誕節活動/" rel="prev" title="聖誕節活動">
-                聖誕節活動 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -543,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-prototype-toLocaleString"><span class="nav-number">1.</span> <span class="nav-text">Date.prototype.toLocaleString()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date"><span class="nav-number">2.</span> <span class="nav-text">Date()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什麼是GMT？"><span class="nav-number">3.</span> <span class="nav-text">什麼是GMT？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什麼是UTC"><span class="nav-number">4.</span> <span class="nav-text">什麼是UTC?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-difference-between-GMT-and-UTC"><span class="nav-number">4.1.</span> <span class="nav-text">The difference between GMT and UTC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TimeStamp"><span class="nav-number">5.</span> <span class="nav-text">TimeStamp</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#includes"><span class="nav-number">1.</span> <span class="nav-text">includes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">2.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#findIndex"><span class="nav-number">3.</span> <span class="nav-text">findIndex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf"><span class="nav-number">4.</span> <span class="nav-text">indexOf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">5.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用途"><span class="nav-number">6.</span> <span class="nav-text">用途</span></a></li></ol></div>
             
 
           </div>
