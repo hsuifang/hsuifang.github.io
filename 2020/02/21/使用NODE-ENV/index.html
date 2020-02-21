@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="webpack,超越入門！Webpack 前端自動化開發,NODE_ENV,">
 
 
 
@@ -77,13 +77,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Not Today !">
-<meta property="og:url" content="hsuifang.github.io/tags/超越入門！Webpack-前端自動化開發/index.html">
+<meta name="keywords" content="webpack,超越入門！Webpack 前端自動化開發,NODE_ENV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用NODE_ENV">
+<meta property="og:url" content="hsuifang.github.io/2020/02/21/使用NODE-ENV/index.html">
 <meta property="og:site_name" content="Not Today !">
 <meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2020-02-21T02:08:26.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Not Today !">
+<meta name="twitter:title" content="使用NODE_ENV">
 
 
 
@@ -113,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/tags/超越入門！Webpack-前端自動化開發/">
+  <link rel="canonical" href="hsuifang.github.io/2020/02/21/使用NODE-ENV/">
 
 
 
 
 
-  <title>Tag: 超越入門！Webpack 前端自動化開發 | Not Today !</title>
+  <title>使用NODE_ENV | Not Today !</title>
   
 
 
@@ -149,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,104 +235,191 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>超越入門！Webpack 前端自動化開發<small>Tag</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/02/21/使用NODE-ENV/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ifang Hsu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Not Today !">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/02/21/使用NODE-ENV/" itemprop="url">
-              
-                <span itemprop="name">使用NODE_ENV</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">使用NODE_ENV</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-21T09:48:21+08:00" content="2020-02-21">
-          02-21
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-21T09:48:21+08:00">
+                2020-02-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端學習/" itemprop="url" rel="index">
+                    <span itemprop="name">前端學習</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/02/14/Path檔案路徑設定/" itemprop="url">
-              
-                <span itemprop="name">Path檔案路徑設定</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-14T16:05:18+08:00" content="2020-02-14">
-          02-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="process-env"><a href="#process-env" class="headerlink" title="process.env"></a>process.env</h2><blockquote>
+<p><a href="https://nodejs.org/docs/latest-v8.x/api/process.html#process_process_env" target="_blank" rel="noopener">官方</a><br>The process.env property returns an object containing the user environment</p>
+</blockquote>
+<h2 id="NODE-ENV"><a href="#NODE-ENV" class="headerlink" title="NODE_ENV"></a>NODE_ENV</h2><blockquote>
+<p>Node.js 裡的環境變數，用來知道目前的執行環境為何<br>不同環境(deploy / develop)時，執行的內容可能有所差異，<br>也因此可以用環境變數來做判斷</p>
+</blockquote>
+<hr>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<h2 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h2><h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts": {</span><br><span class="line">    "start": "<strong>cross-env NODE_ENV=development <strong> webpack --mode development",</strong></strong></span><br><span class="line">    "deploy": "cross-env NODE_ENV=development webpack --mode production"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/02/14/基本webpack啟動與設定/" itemprop="url">
-              
-                <span itemprop="name">基本webpack啟動與設定</span>
-              
-            </a>
-        
-      </h2>
+<h3 id="環境設定調整"><a href="#環境設定調整" class="headerlink" title="環境設定調整"></a>環境設定調整</h3><ol>
+<li><p>可以在config中，用NODE_ENV去判斷執行的內容<br>If (NODE_ENV === ‘development’) {}</p>
+</li>
+<li><p>可以在config中，用NODE_ENV去當mode的參數，省去在script中 –mode development</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">module.exports = {</span><br><span class="line">    mode: process.env.NODE_ENV,</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-14T16:00:08+08:00" content="2020-02-14">
-          02-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+</li>
+</ol>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>Windows 要額外安裝cross-env，因其沒有NODE_ENV環境變數</p>
+</body></html>
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+            <a href="/tags/超越入門！Webpack-前端自動化開發/" rel="tag"># 超越入門！Webpack 前端自動化開發</a>
+          
+            <a href="/tags/NODE-ENV/" rel="tag"># NODE_ENV</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/15/如何在陣列中搜尋值？/" rel="next" title="如何在陣列中搜尋值、索引值？">
+                <i class="fa fa-chevron-left"></i> 如何在陣列中搜尋值、索引值？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -338,6 +427,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -358,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -431,6 +533,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#process-env"><span class="nav-number">1.</span> <span class="nav-text">process.env</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NODE-ENV"><span class="nav-number">2.</span> <span class="nav-text">NODE_ENV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#實作"><span class="nav-number">3.</span> <span class="nav-text">實作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json"><span class="nav-number">3.1.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#環境設定調整"><span class="nav-number">3.2.</span> <span class="nav-text">環境設定調整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">3.3.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -571,6 +689,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用NODE_ENV]]></title>
+    <url>%2F2020%2F02%2F21%2F%E4%BD%BF%E7%94%A8NODE-ENV%2F</url>
+    <content type="text"><![CDATA[process.env 官方The process.env property returns an object containing the user environment NODE_ENV Node.js 裡的環境變數，用來知道目前的執行環境為何不同環境(deploy / develop)時，執行的內容可能有所差異，也因此可以用環境變數來做判斷 實作package.json1234"scripts": { "start": "cross-env NODE_ENV=development webpack --mode development", "deploy": "cross-env NODE_ENV=development webpack --mode production"} 環境設定調整 可以在config中，用NODE_ENV去判斷執行的內容If (NODE_ENV === ‘development’) {} 可以在config中，用NODE_ENV去當mode的參數，省去在script中 –mode development 1234module.exports = { mode: process.env.NODE_ENV, ...} 注意Windows 要額外安裝cross-env，因其沒有NODE_ENV環境變數]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
+        <tag>NODE_ENV</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何在陣列中搜尋值、索引值？]]></title>
     <url>%2F2020%2F02%2F15%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E9%99%A3%E5%88%97%E4%B8%AD%E6%90%9C%E5%B0%8B%E5%80%BC%EF%BC%9F%2F</url>
     <content type="text"><![CDATA[在JavaScript中，有諸多的方法用以找尋特定的值、位置，以下整理在陣列中搜尋時，可能會用到的方法其中所列的方法為：includes、find、findIndex、indexOf及filter includes 判斷陣列是否包含特定的元素，並以此來回傳 Boolean (true /false)arr.includes(searchElement[, fromIndex]) 123const arr = [1, 2, 3];console.log(arr.includes(2, [fromIndex])) // trueconsole.log(arr.includes('2', [fromIndex])) // false find 回傳第一個滿足所提供之測試函式的元素”值”，否則回傳 undefined 12345const arr = [5, 12, 8, 130, 44];const found = arr.find(element => element == 10);console.log(found); findIndex 回傳第一個滿足所提供之函式的”索引”，否則回傳 -1 12345const arr = [5, 12, 8, 130, 44];const found = arr.findIndex(element => element == 10);console.log(found); indexOf 回傳陣列中第一個被找到之”索引”，否則回傳 -1arr.indexOf(searchElement[, fromIndex]) 123const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];console.log(beasts.indexOf('bison')); filter 會建立一個經指定之函式運算後，由「原陣列」中通過該函式檢驗之元素所構成的「新陣列」 123const words = ["spray", "limit", "elite", "exuberant", "destruction", "present", "happy"];let longWords = words.filter(word => word.length > 6); 用途 用途 陣列方法 確認是否存在？ includes 需要取得值 find、filter 需要取得索引值 findIndex、indexof]]></content>
