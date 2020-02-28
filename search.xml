@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CSS_Loader]]></title>
+    <url>%2F2020%2F02%2F28%2FCSS-Loader-1%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS Loader]]></title>
+    <url>%2F2020%2F02%2F28%2FCSS-Loader%2F</url>
+    <content type="text"><![CDATA[如何透過Webpakc去讀取非JS的檔案，如CSS、HTML、Images…loader Loader 讀取解析除了JS以外的檔案 讀取順序都是由後面執行到前面的，ex: [‘style-loader(第二)’, ‘css-loader (先)’] Module: 是用來提取非js會用到的功能 用webpack讀取、運用CSS 以下分成拆分出CSS與注入JS兩種方式 注入JS Step 1: 安裝 CSS-Loader 和 Style-Loader 1npm install --save-dev css-loader style-loader Step 2: 建立css 檔案, 且於index.js載入 1import './index.css'; Step 3: 設定webpack.config.js 123456module: { rules: [{ test: /\.css$/, use: ['style-loader', 'css-loader'] // css-loader 讀去css / style-loader 注入JS }] } 拆分CSS 想將CSS獨立出來時，就需要使用Plugin.什麼是plugin, 就是解決loader做不到的事情使用了plugin就不需要style-loader Step 1: extract-text-webpack-plugin 123npm install --save-dev extract-text-webpack-plugin@next!! webpack4 支援的版本目前是beta版，所以要加@next Step 2: extract-text-webpack-plugin 123456789101112131415161718192021// module.exports 前var ExtractTextPlugin = require('extract-text-webpack-plugin');var extractCSS = new ExtractTextPlugin('css/[name].css');// module.exports 裡module: { rules:[ ... { test: /\.css$/, // 讀取這個副檔名 use: extractCSS.extract([ 'css-loader', 'postcss-loader' ]) // Loader 的順序都是由後面執行到前面的, 所以會先使用css-loader, 再使用style-loader }, .. ]},plugins: [ extractCSS]]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
+        <tag>loader</tag>
+        <tag>CSS loader</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[filename檔案名稱修正]]></title>
     <url>%2F2020%2F02%2F28%2Ffilename%E6%AA%94%E6%A1%88%E5%90%8D%E7%A8%B1%E4%BF%AE%E6%AD%A3%2F</url>
     <content type="text"><![CDATA[若有多個entry時，就將webpack.config裡的entry調整成object的形式 原先entry： 1entry: './index.js ’// 進入點 修改後entry： 12345entry: { // key: value index: ‘./index.js', about: ‘./about.js'}, 原先output 1234output: { path: path.resolve(__dirname, "./dist"), filename: 'index-bundle.js’} 修改後output 123456!!![name] =>> 依照entry的key的名稱output: { path: path.resolve(__dirname, "./dist"), filename: '[name]-bundle.js’}]]></content>
@@ -10,7 +29,7 @@
       <tags>
         <tag>webpack</tag>
         <tag>超越入門！Webpack 前端自動化開發</tag>
-        <tag>NODE_ENV</tag>
+        <tag>filename</tag>
       </tags>
   </entry>
   <entry>
