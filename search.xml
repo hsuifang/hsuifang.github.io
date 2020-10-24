@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第二週-Flexbox 網頁排版術]]></title>
+    <url>%2F2020%2F10%2F24%2F%E7%AC%AC%E4%BA%8C%E9%80%B1%20-%20Flexbox%20%E7%B6%B2%E9%A0%81%E6%8E%92%E7%89%88%E8%A1%93%2F</url>
+    <content type="text"><![CDATA[flex宇宙會有「外容器」container 及「內元件」items，以及軸線概念、對齊方法概念 Flex 外層屬性 (container) 實現Flex排版或內元件要有效果的關鍵：外容器加上display: flex \ display: inline-flex 每個 HTML 標籤，能同時擁有內元件跟外容器身份 如果沒有做特定的設定，內部元件會依據外容器去做比例上的調整 每一個item預設相等高度 軸線 Axes 分成「主軸」main axis、「交錯軸」cross axis MDN 主軸線 - 排排站依據 / 資訊動線的流向— flex-flow 是 flex-direction及flex-wrap的縮寫屬性 flex-direction - 決定主軸的方向 / 主軸方向決定Item排列方式和結果 row (default) | row-reverse | column | column-reverse flex-wrap - 換行屬性，決定items 是否維持同一行 Default value is 「nowrap」, items 自適應父容器於同一行 flex-wrap: nowrap | wrap | wrap-reverse | initial | inherit; 123456789101112// 有六個子元素(每一個寬度一樣)，而外容器假定寬應該只等於3個子元素// 設定display: flex 、及flex-wrap 呈現如下nowrapA B C D E Fwrap: A B CD E Fwrap-reverse:D E FA B C The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines. align-content 搭配 wrap、align-items 搭配 nowrap justify-content - items 在主軸線上排排站、對齊的方式 flex-start (default) | flex-end | center | space-between | space-around | space-evenly | initial | inherit; space-between (平均分配，首尾items分別貼齊左右邊) space-around ( items 間間距是左右兩邊兩倍) space-evenly (間距一樣、IE11 不支援) 範例 Apple - justify-content https://taiwancanhelp.us/ 交錯軸永遠的都會跟主軸去做垂直交錯 align-items - 交錯軸的對齊方式 flex-start | center | flex-end | stretch (default) | baseline align-self 屬性定義目前單一彈性項目如何對齊。這個設定會覆蓋 align-items 的預設值。 在container 有設定高度的前提下，內元素以當前的交錯軸去決定如何對齊 align-content - set how multiple lines are spaced apart from each other flex-start | center | flex-end | stretch (default) | space-between | space-around 在container 有設定高度的前提下，多行的內元素在外容器內，藉有彼此決定要怎麼排列 在只有單行下，書寫align-content是沒有用 進階屬性FlexThis is the shorthand for flex-grow, flex-shrink and flex-basis combined flex: flex-grow flex-shrink flex-basis; flex-grow 預設為 0 用在當外容器還有剩餘空間時，內元素如何分配剩餘空間 flex-shrink 預設為 1 當單行內元素超過外容器時，items要如何縮小 文章一開頭時Key說: 如果沒有做特定的設定，內部元件會依據外容器去做比例上的調整 flex-basis flex-basis 預設值爲 auto defines the default size of an element before the remaining space is distributed. 當flex-direction: row, 決定寬度 當flex-direction: row, 決定高度 order order 則是針對子元素去設定它的排列順序 其他 巢狀: Flex 裡頭還可以包 Flex 水平垂直置中 123display: flex;justify-content: center;align-items: center 常見UI工具 - Sketch、PS 、XD、figma tools Flex emmet doc - Guide Game - 六角學院 Codepen Game - flexboxfroggy]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>網頁切版直播班-2020秋季</tag>
+        <tag>基礎觀念</tag>
+        <tag>Flexbox</tag>
+        <tag>flex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[第一週-1px也不差的版型控制術]]></title>
-    <url>%2F2020%2F10%2F19%2F%E7%AC%AC%E4%B8%80%E9%80%B1-1px%E4%B9%9F%E4%B8%8D%E5%B7%AE%E7%9A%84%E7%89%88%E5%9E%8B%E6%8E%A7%E5%88%B6%E8%A1%93%2F</url>
+    <url>%2F2020%2F10%2F19%2F%E7%AC%AC%E4%B8%80%E9%80%B1%20-%201px%E4%B9%9F%E4%B8%8D%E5%B7%AE%E7%9A%84%E7%89%88%E5%9E%8B%E6%8E%A7%E5%88%B6%E8%A1%93%2F</url>
     <content type="text"><![CDATA[區塊與行內元素概念區塊元素 儘可能撐滿版面 可以設定寬高 另起一行 ex: h1、ul、li、p、div 行內元素 ex: a、span box-model 與行距設定容器觀念 寫網頁必備盒模型觀念! 預設 box-sizing: content-box, 實體寬度就要連 width \ padding \ border 一起算 不想算數學的方法: box-sizing: border-box margin 只影響瀏覽器佈局，不影響box 本體寬度 行距觀念 / line height 網頁字預設16px, 行距預設1倍 文字高度不是透過文字大小撐起，而是透過行距推擠 高度是透過行距產生 神秘的圖片高度 圖片預設有2-3px 留白 解決方法 vertical-align: middle display: block 注意項目 起手式：reset 常用的HTML tag: div 不要寫死高度, 除非是logo [ * ] 權重比較低 br 的使用時機：同一段落時使用 px 是螢幕上的，pt 是印刷用的 做事要有一致性 margin-top 有時候會有bug，儘量使用margin-bottom 盡量語意命名，避免用方向、數字 實作滿版式網頁 滿版閱讀性不是很好, 所以需要斟酌使用 可在滿版與內容非滿版交互運用，以footer為例 123.footer .footer-inner p{內容} container 習慣放置閱讀用的容器 / 居中內容內容 中間容器大多 1000 - 1280]]></content>
       <categories>
         <category>前端學習</category>
@@ -23,9 +37,9 @@
       </categories>
       <tags>
         <tag>webpack</tag>
-        <tag>超越入門！Webpack 前端自動化開發</tag>
         <tag>loader</tag>
         <tag>CSS loader</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
       </tags>
   </entry>
   <entry>
@@ -76,8 +90,8 @@
       </categories>
       <tags>
         <tag>webpack</tag>
-        <tag>path</tag>
         <tag>超越入門！Webpack 前端自動化開發</tag>
+        <tag>path</tag>
       </tags>
   </entry>
   <entry>
