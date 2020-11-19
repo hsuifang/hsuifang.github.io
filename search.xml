@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第五週-後台表單設計]]></title>
+    <url>%2F2020%2F11%2F19%2F%E7%AC%AC%E4%BA%94%E9%80%B1-%E5%BE%8C%E5%8F%B0%E8%A1%A8%E5%96%AE%E8%A8%AD%E8%A8%88%2F</url>
+    <content type="text"><![CDATA[Form 表單大綱 完整表單傳送： form \ post action到網址 \ name \ submit 表單三劍客 form label input 要用form 傳輸送出資料，要用type=submit action = 就是將值傳給後端目標接收位置 method = post, get 很少用在表單 name 為參數名稱 input[type=”button”] => 搭配Javascript 用queryString 傳送form ?account=XXX 後端只管name, id 是前端用以增加使用者體驗，與後端無關; ex:點擊帳號字眼focus在輸入框 12帳號 傳送資料用https, http 網址不安全 123456789post 出去 => ?account=ssdf&nickname=sadfsdf< form action="/index.html"> < label for="account">帳號 < input type="text" placeholder="請輸入帳號" name="account" id="account"> < label for="nickname">帳號 < input type="text" placeholder="請輸入帳號" name="nickname" id="nickname"> < input type="submit" value="送出">< /form> 表單常用tag / 屬性[ date ] date的html 標籤是不建議用，因為他在每個瀏覽器的資源不一樣 無法控制他 找套件 jquery\ datepicker \ jquery ui [ tel ] 支援ios \ android 增加使用者體驗 [ select option ] 手機版的樣式有原生select 不要想去改select樣式 假select才能調整樣式 [ 屬性：value、readonly、disabled ] 編輯時：自動帶入用value readonly: 只能讀不能看 disabled 禁止做什麼事情，長搭配js 金流表單可參考 綠界 藍新 pc momo CSS reset meyerweb 全部清空 normalize 保留基本樣式]]></content>
+      <categories>
+        <category>前端學習</category>
+      </categories>
+      <tags>
+        <tag>網頁切版直播班-2020秋季</tag>
+        <tag>表單</tag>
+        <tag>CSS Reset</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[第四週-多頁式網頁]]></title>
     <url>%2F2020%2F11%2F11%2F%E7%AC%AC%E5%9B%9B%E9%80%B1-%E5%A4%9A%E9%A0%81%E5%BC%8F%E7%B6%B2%E9%A0%81%2F</url>
     <content type="text"><![CDATA[Gulp 整合 Gulp 前端任務管理工具 安裝成功與否指令確認：node -v / gulp -v REF gulp 自動化原理 Layout 觀念設計 ID 與錨點設計 12a[href="#title3]{連結到錨點}#title3 id 只能唯一性 重複id在舊瀏覽器會出錯 指定到對應位置 ⇒ href=”page.html#title3” id 才能當錨點 X class 什麼是 Layout ？ 多頁式共同的地方 可以被提取出來的區塊 EJS 樣板語言介紹 關注 app(開發) 和 dist(最終輸出) 資料夾 .ejs ⇒ 樣板語言 ⇒ 常用在node.js ⇒ 比較像html SCSS 有順序性！ import 檔案切分 最後只會有一隻最終的css 階層 ３層是為閱讀性佳的程式碼，而最後一層（第四層）通常保留給擬態選擇器 要管理就要了解編譯 YT - 六角：CSS 選擇器優化影片 css 可以直接貼到 scss 大學體驗營：常見錯誤 簡報 變數 顏色 同一種紅 - red-100 ~red-700 red / darkRed 字型 font-s \ font-m \ font-xl import 拆分規劃 _：下底線命名開頭，是不做編譯，純用來合併 variables 或 reset 依據情境或變數放在最上面 SCSS 結構參考 12345@import "variable";// 變數 @import "reset"; // reset.css @import "layout"; // 共同框架,第一層@import "index"; @import "page1"; Live Sass Complier設定 12345678910settings/ .json{ "liveSassCompile.settings.formats": [ { "format": "compressed", "extensionName": ".min.css", "savePath": "/css/" } ]}]]></content>
@@ -65,9 +78,9 @@
       </categories>
       <tags>
         <tag>webpack</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
         <tag>loader</tag>
         <tag>CSS loader</tag>
-        <tag>超越入門！Webpack 前端自動化開發</tag>
       </tags>
   </entry>
   <entry>
@@ -118,8 +131,8 @@
       </categories>
       <tags>
         <tag>webpack</tag>
-        <tag>超越入門！Webpack 前端自動化開發</tag>
         <tag>path</tag>
+        <tag>超越入門！Webpack 前端自動化開發</tag>
       </tags>
   </entry>
   <entry>

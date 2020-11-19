@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="專案經驗,安全性驗證,">
+  <meta name="keywords" content="網頁切版直播班-2020秋季,表單,CSS Reset,">
 
 
 
@@ -77,18 +77,15 @@
 
 
 
-<meta name="description" content="含有內容、ISSUE、解決方式、後記 || 專案內容使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行LINE LOGIN 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。">
-<meta name="keywords" content="專案經驗,安全性驗證">
+<meta name="keywords" content="網頁切版直播班-2020秋季,表單,CSS Reset">
 <meta property="og:type" content="article">
-<meta property="og:title" content="網頁安全性驗證">
-<meta property="og:url" content="hsuifang.github.io/2019/08/17/網頁安全性驗證/index.html">
+<meta property="og:title" content="第五週-後台表單設計">
+<meta property="og:url" content="hsuifang.github.io/2020/11/19/第五週-後台表單設計/index.html">
 <meta property="og:site_name" content="Not Today !">
-<meta property="og:description" content="含有內容、ISSUE、解決方式、後記 || 專案內容使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行LINE LOGIN 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。">
 <meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2019-12-20T01:55:58.668Z">
+<meta property="og:updated_time" content="2020-11-19T15:02:04.324Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="網頁安全性驗證">
-<meta name="twitter:description" content="含有內容、ISSUE、解決方式、後記 || 專案內容使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行LINE LOGIN 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。">
+<meta name="twitter:title" content="第五週-後台表單設計">
 
 
 
@@ -118,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="hsuifang.github.io/2019/08/17/網頁安全性驗證/">
+  <link rel="canonical" href="hsuifang.github.io/2020/11/19/第五週-後台表單設計/">
 
 
 
 
 
-  <title>網頁安全性驗證 | Not Today !</title>
+  <title>第五週-後台表單設計 | Not Today !</title>
   
 
 
@@ -252,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2019/08/17/網頁安全性驗證/">
+    <link itemprop="mainEntityOfPage" href="hsuifang.github.io/2020/11/19/第五週-後台表單設計/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ifang Hsu">
@@ -269,7 +266,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">網頁安全性驗證</h1>
+          <h1 class="post-title" itemprop="name headline">第五週-後台表單設計</h1>
         
 
         <div class="post-meta">
@@ -281,8 +278,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-17T14:12:09+08:00">
-                2019-08-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-11-19T22:38:33+08:00">
+                2020-11-19
               </time>
             
 
@@ -304,8 +301,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/專案/" itemprop="url" rel="index">
-                    <span itemprop="name">專案</span>
+                  <a href="/categories/前端學習/" itemprop="url" rel="index">
+                    <span itemprop="name">前端學習</span>
                   </a>
                 </span>
 
@@ -341,24 +338,65 @@
       
 
       
-        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><p><code>含有內容、ISSUE、解決方式、後記</code></p>
-<h2 id="專案內容"><a href="#專案內容" class="headerlink" title="|| 專案內容"></a>|| 專案內容</h2><p>使用者於LINE官方帳號點擊會員卡連結(API)，系統會進行<a href="https://developers.line.biz/en/services/line-login/" target="_blank" rel="noopener">LINE LOGIN</a> 得知特定身份後，將UID置於連結，並導頁至會員卡網頁;而前端人員拿取UID打API取得會員卡資料。</p>
-<a id="more"></a>
-<h2 id="專案ISSUE"><a href="#專案ISSUE" class="headerlink" title="||  專案ISSUE"></a>||  專案ISSUE</h2><p>有位使用者複製LOGIN後的連結(含有UID資訊)，接著使用其他裝置點擊其連結，發現仍可以看到會員卡，故認為其有安全性的憂慮，且有違反歐洲的某的法規，因此要求改善。</p>
-<h2 id="解決方式"><a href="#解決方式" class="headerlink" title="|| 解決方式"></a>|| 解決方式</h2><ol>
-<li>LINE LOGIN將Line 一次性的參數置入連結</li>
-<li>前端人員取得連結參數, 打API再次驗證連結參數正確性</li>
-<li>驗證成功後, Response Headers 多一個key</li>
-<li>打API取會員卡資料時，Request Headers 多增加ㄧkey參數</li>
-<li>若步驟2失敗時, 再走一次步驟1</li>
-</ol>
-<hr>
-<h2 id="後記"><a href="#後記" class="headerlink" title="|| 後記"></a>|| 後記</h2><blockquote>
-<p>若之後其他使用者再複製此連結時，因為一次性參數原則，會再要求依據登入帳號密碼，執行LINE LOGIN驗證，也加強了安全性。</p>
+        <html><head><meta name="generator" content="Hexo 3.9.0"></head><body><h2 id="Form-表單"><a href="#Form-表單" class="headerlink" title="Form 表單"></a>Form 表單</h2><h3 id="大綱"><a href="#大綱" class="headerlink" title="大綱"></a>大綱</h3><blockquote>
+<p>完整表單傳送： form \ post action到網址 \ name \ submit</p>
 </blockquote>
-<blockquote>
-<p>但這樣的一次性參數的安全性修正也苦了測試人員及開發人員，在手機端，因為是已登入APP狀態，所以不會要求輸入帳號密碼，也不會影響體驗 ; 但如果在網頁端，相關人員就要一直輸入帳號密碼或點擊確認輸入按鈕，嗚嗚嗚！</p>
-</blockquote>
+<ul>
+<li><p>表單三劍客 form label input</p>
+</li>
+<li><p>要用form 傳輸送出資料，要用type=submit</p>
+</li>
+<li><p>action = 就是將值傳給後端目標接收位置</p>
+</li>
+<li><p>method = post, get 很少用在表單</p>
+</li>
+<li><p>name 為參數名稱</p>
+</li>
+<li><p>input[type=”button”] => 搭配Javascript</p>
+</li>
+<li><p>用queryString 傳送form ?account=XXX</p>
+</li>
+<li><p>後端只管name, id 是前端用以增加使用者體驗，與後端無關; ex:點擊帳號字眼focus在輸入框</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><label for="account">帳號</label></span><br><span class="line"><input type="text" placeholder="請輸入帳號" id="account"></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>傳送資料用https, http 網址不安全</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">post 出去 => ?account=ssdf&nickname=sadfsdf</span><br><span class="line"></span><br><span class="line">< form action="/index.html"></span><br><span class="line">  < label for="account">帳號</></span><br><span class="line">  < input type="text" placeholder="請輸入帳號" name="account" id="account"></span><br><span class="line">  < label for="nickname">帳號</></span><br><span class="line">  < input type="text" placeholder="請輸入帳號" name="nickname" id="nickname"></span><br><span class="line">  < input type="submit" value="送出"></span><br><span class="line">< /form></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="表單常用tag-屬性"><a href="#表單常用tag-屬性" class="headerlink" title="表單常用tag / 屬性"></a>表單常用tag / 屬性</h3><p>[ date ]</p>
+<ul>
+<li>date的html 標籤是不建議用，因為他在每個瀏覽器的資源不一樣</li>
+<li>無法控制他</li>
+<li>找套件 jquery\ datepicker \</li>
+<li><a href="https://jqueryui.com/datepicker/" target="_blank" rel="noopener">jquery ui</a></li>
+</ul>
+<p>[ tel ]</p>
+<ul>
+<li>支援ios \ android</li>
+<li>增加使用者體驗</li>
+</ul>
+<p>[ select option ]</p>
+<ul>
+<li>手機版的樣式有原生select</li>
+<li>不要想去改select樣式</li>
+<li>假select才能調整樣式</li>
+</ul>
+<p>[ 屬性：value、readonly、disabled ]</p>
+<ul>
+<li>編輯時：自動帶入用value</li>
+<li>readonly: 只能讀不能看</li>
+<li>disabled 禁止做什麼事情，長搭配js</li>
+</ul>
+<h3 id="金流表單可參考"><a href="#金流表單可參考" class="headerlink" title="金流表單可參考"></a>金流表單可參考</h3><ul>
+<li>綠界</li>
+<li>藍新</li>
+<li>pc momo</li>
+</ul>
+<h2 id="CSS-reset"><a href="#CSS-reset" class="headerlink" title="CSS reset"></a>CSS reset</h2><ul>
+<li>meyerweb 全部清空</li>
+<li>normalize 保留基本樣式</li>
+</ul>
 </body></html>
       
     </div>
@@ -376,9 +414,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/專案經驗/" rel="tag"># 專案經驗</a>
+            <a href="/tags/網頁切版直播班-2020秋季/" rel="tag"># 網頁切版直播班-2020秋季</a>
           
-            <a href="/tags/安全性驗證/" rel="tag"># 安全性驗證</a>
+            <a href="/tags/表單/" rel="tag"># 表單</a>
+          
+            <a href="/tags/CSS-Reset/" rel="tag"># CSS Reset</a>
           
         </div>
       
@@ -391,15 +431,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/11/11/第四週-多頁式網頁/" rel="next" title="第四週-多頁式網頁">
+                <i class="fa fa-chevron-left"></i> 第四週-多頁式網頁
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/18/Gulp初探/" rel="prev" title="Gulp初探">
-                Gulp初探 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -543,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#專案內容"><span class="nav-number">1.</span> <span class="nav-text">|| 專案內容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#專案ISSUE"><span class="nav-number">2.</span> <span class="nav-text">||  專案ISSUE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解決方式"><span class="nav-number">3.</span> <span class="nav-text">|| 解決方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#後記"><span class="nav-number">4.</span> <span class="nav-text">|| 後記</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Form-表單"><span class="nav-number">1.</span> <span class="nav-text">Form 表單</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大綱"><span class="nav-number">1.1.</span> <span class="nav-text">大綱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表單常用tag-屬性"><span class="nav-number">1.2.</span> <span class="nav-text">表單常用tag / 屬性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#金流表單可參考"><span class="nav-number">1.3.</span> <span class="nav-text">金流表單可參考</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-reset"><span class="nav-number">2.</span> <span class="nav-text">CSS reset</span></a></li></ol></div>
             
 
           </div>
