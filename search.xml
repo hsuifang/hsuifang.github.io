@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[網頁切版直播班-2020秋季]]></title>
+    <title><![CDATA[心得 - 網頁切版直播班-2020秋季]]></title>
     <url>%2F2021%2F01%2F03%2F%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88%E7%9B%B4%E6%92%AD%E7%8F%AD-2020%E7%A7%8B%E5%AD%A3%2F</url>
     <content type="text"><![CDATA[一直以來六角學院吸引我的地方是 - 有人會針對你的程式給予建議 報名原因在第一梯次直播班消息釋出時，礙於當時的空閒時間實在太瑣碎，所以只好默默在心中壓了一個PASS；然而在第二梯次釋出消息時，檢視了當時的生活狀況，決定按下送出，進入了這場旅程 課程概述在八週直播課程開始前，學院就會一步一步的釋出一些未來會觸及的觀念與各式牛刀小試，使學員在正式上課前，就漸漸上發條； 在正式上課後，每週都會有一點點的新觀念（每週的觀念老師都有認真的設計過，這沒有阿諛奉承)，但不至於消化不良，而這些新觀念都是未來課程的基石或甜點(所以我真的沒有阿諛奉承)．每週直播後，學院會持續提供該週相關觀念的課程影音及助教的每日任務 最大收穫別於一般的的學院的影音課程，我更喜歡直播課程，雖然還是一個人坐在電腦前面聽著老師說話，但是直播的課程因為有即時的互動，我覺得領悟的速度和效果更勝於一般影音課程 雖然沒有跟各位同學見過面，但透過作業平台的媒介，讓我感受到一起奮戰的感覺，也藉由同學的作業檢視自身的不足 寫到這，我發現這直播課最棒的兩個點應該是 有神人的作業可以讓你檢視其程式架構 助教、老師會針對作業給予建議 因為這趟旅程，開啟的不少迷霧地帶，也檢視到自己的不足，根本是越學越發現有好多要學習ＸＤ，而身為工程師，期許自己能不段的修正、不段的闖，因為還有很多迷霧地帶等著我 最後，謝謝老師與助教這幾個月辛苦的教學與改作業！]]></content>
       <categories>
@@ -42,7 +42,7 @@
   <entry>
     <title><![CDATA[第三週 - 響應式網頁設計]]></title>
     <url>%2F2020%2F11%2F03%2F%E7%AC%AC%E4%B8%89%E9%80%B1%20-%20%E9%9F%BF%E6%87%89%E5%BC%8F%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%2F</url>
-    <content type="text"><![CDATA[小知識 設計師用 1920px開版，只是想要模擬滿版，並非container 是1920 常見container 大小：1400、 1200、 1280 肉眼一次看到的文字大概落在25 - 40字 flex 小撇步 適合不規則：改變 flex-direction: row ⇒ column 有固定規則：wrap 搭配 % % 是看父層級的寬度，也就是上一層的寬度當基準 環境建立 meta 不加UTF-8，在有些瀏覽器下，中文會呈現亂碼 viewport 設定 ⇒ 螢幕解析度的Reset 12345// 做響應式必加// 螢幕解析度 = 螢幕寬度 (width=device-width)"viewport" content="width=device-width, initial-scale=1.0">// content 細節設定 => user-scalable \ maximum-scale \ minimum-scale RWD CSS 必須設定 1234567891011/* rwd img css，可當作是 CSS Reset 其中一個 */img{ max-width: 100%; height: auto;}/* 全域 border box */*,*::before,*::after{ box-sizing: border-box;} 斷點規劃 先寫PC版型，再依序往下寫響應式設計 123456789101112131415161718192021222324/*先寫PC版型，再依序往下寫響應式設計*/.title{ color: red;}.content{ color: black;}/*在 iPad 直式下變更樣式*//* 768以下，這範圍的code會被打開 */// 如果是剛好768 就是吃藍色@media(max-width:768px){ .title{ color: blue; } .content{ font-size: 30px; }}/*在 iPhone11 直式下變更樣式 */@media(max-width: 375px){ .title{ color: yellow; }} 幾個設定檔案，就有幾個斷點 斷點除錯工具 範例 PC - 1200px iPad - 768px iPad以下 - 767px iPhone 6 Plus - 414px (視專案族群) iPhone 6 - 375px (視專案族群) iPhone 5、SE - 320px CSS 權重 先看權重，再看先後分數是會累加的 HTML 標籤：1 分 class 選擇器：10 分 ID 選擇器：100 分 不要用id 切版 inline style：1000 分 常用在給js操作用 暴力的寫法 !important：10000 分]]></content>
+    <content type="text"><![CDATA[小知識 設計師用 1920px開版，只是想要模擬滿版，並非container 是1920 常見container 大小：1400、 1200、 1280 肉眼一次看到的文字大概落在25 - 40字 flex 小撇步 適合不規則：改變 flex-direction: row ⇒ column 有固定規則：wrap 搭配 % % 是看父層級的寬度，也就是上一層的寬度當基準 環境建立 meta 不加UTF-8，在有些瀏覽器下，中文會呈現亂碼 viewport 設定 ⇒ 螢幕解析度的Reset 12345// 做響應式必加// 螢幕解析度 = 螢幕寬度 (width=device-width)// content 細節設定 => user-scalable \ maximum-scale \ minimum-scale RWD CSS 必須設定 1234567891011/* rwd img css，可當作是 CSS Reset 其中一個 */img{ max-width: 100%; height: auto;}/* 全域 border box */*,*::before,*::after{ box-sizing: border-box;} 斷點規劃 先寫PC版型，再依序往下寫響應式設計 123456789101112131415161718192021222324/*先寫PC版型，再依序往下寫響應式設計*/.title{ color: red;}.content{ color: black;}/*在 iPad 直式下變更樣式*//* 768以下，這範圍的code會被打開 */// 如果是剛好768 就是吃藍色@media(max-width:768px){ .title{ color: blue; } .content{ font-size: 30px; }}/*在 iPhone11 直式下變更樣式 */@media(max-width: 375px){ .title{ color: yellow; }} 幾個設定檔案，就有幾個斷點 斷點除錯工具 範例 PC - 1200px iPad - 768px iPad以下 - 767px iPhone 6 Plus - 414px (視專案族群) iPhone 6 - 375px (視專案族群) iPhone 5、SE - 320px CSS 權重 先看權重，再看先後分數是會累加的 HTML 標籤：1 分 class 選擇器：10 分 ID 選擇器：100 分 不要用id 切版 inline style：1000 分 常用在給js操作用 暴力的寫法 !important：10000 分]]></content>
       <categories>
         <category>前端學習</category>
       </categories>
@@ -62,9 +62,9 @@
       </categories>
       <tags>
         <tag>網頁切版直播班-2020秋季</tag>
+        <tag>基礎觀念</tag>
         <tag>Flexbox</tag>
         <tag>flex</tag>
-        <tag>基礎觀念</tag>
       </tags>
   </entry>
   <entry>
@@ -76,9 +76,9 @@
       </categories>
       <tags>
         <tag>網頁切版直播班-2020秋季</tag>
-        <tag>基礎觀念</tag>
         <tag>容器</tag>
         <tag>區塊</tag>
+        <tag>基礎觀念</tag>
       </tags>
   </entry>
   <entry>
